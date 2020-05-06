@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca189e68150984a4c8734a56466bad1e, type: 3}
   m_Name: Woman2
   m_EditorClassIdentifier: 
+  personDetailsDB: {fileID: 11400000, guid: 7fb41e13dbc734e4d8f31de61dd1a12b, type: 2}
   firstName: Susan
   lastName: Smith
   story: Barbie Girl in a Barbie World
   age: 21
-  lifeExpectancy: 25
   eventYear: 22
   karmaEvent: {fileID: 11400000, guid: 91091acf55877e5448e2d626b13fe104, type: 2}

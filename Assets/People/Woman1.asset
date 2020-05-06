@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca189e68150984a4c8734a56466bad1e, type: 3}
   m_Name: Woman1
   m_EditorClassIdentifier: 
+  personDetailsDB: {fileID: 11400000, guid: 7fb41e13dbc734e4d8f31de61dd1a12b, type: 2}
   firstName: Jane
   lastName: Doe
   story: She is a nurse doing nurse things.
   age: 30
-  lifeExpectancy: 65
   eventYear: 70
   karmaEvent: {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}

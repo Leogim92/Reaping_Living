@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Person", menuName = "Create New Person")]
 public class PersonBase : ScriptableObject
 {
+    [SerializeField] PersonDetails personDetailsDB = null;
+
     [SerializeField] string firstName ="First Name";
     [SerializeField] string lastName ="Last Name";
     [SerializeField] string story ="Story Description";
