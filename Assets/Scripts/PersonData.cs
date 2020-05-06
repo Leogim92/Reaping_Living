@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class PersonData : MonoBehaviour
 {
-    [SerializeField] PersonBase person = null;
-    [SerializeField] int lifeExpectancy = 0;
+    [SerializeField] PersonDetails personDetailsDB =null;
+    PersonBase person = null;
     bool isFateSealed = false;
+    private void Awake()
+    {
+        person = PersonBase.CreateInstance(personDetailsDB);
+    }
     public bool IsFateSealed
     {
         get { return isFateSealed; }
         set { isFateSealed = value; }
     }
-    public int LifeExpectancy
-    {
-        get { return lifeExpectancy; }
-        set { lifeExpectancy = value; }
-    }
-
+    
     public PersonBase Person { get { return person; } }
 }

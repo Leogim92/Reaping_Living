@@ -59,7 +59,7 @@ public class GiftReapUI : MonoBehaviour
         nameText.text = _personData.Person.Name;
         ageText.text = _personData.Person.Age.ToString();
         storyText.text = _personData.Person.Story;
-        lifeExpectancyText.text = _personData.LifeExpectancy.ToString();
+        lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
         eventYearText.text = _personData.Person.EventYear.ToString();
         eventTypeText.text = UpperFirst(_personData.Person.karmaEvent.karmaAlignment.ToString());
         eventDescriptionText.text = _personData.Person.karmaEvent.eventDescription;
@@ -79,18 +79,18 @@ public class GiftReapUI : MonoBehaviour
         if (_playerPoints.YearsCurrency > 0)
         {
 
-            _personData.LifeExpectancy++;
-            lifeExpectancyText.text = _personData.LifeExpectancy.ToString();
+            _personData.Person.LifeExpectancy++;
+            lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
             _playerPoints.UpdateYears(-1);
             _playerPoints.UpdateKarma(1);
         }
     }
     void LowYears()
     {
-        if (_playerPoints.YearsCurrency < 100 && _personData.LifeExpectancy > _personData.Person.Age)
+        if (_playerPoints.YearsCurrency < 100 && _personData.Person.LifeExpectancy > _personData.Person.Age)
         {
-            _personData.LifeExpectancy--;
-            lifeExpectancyText.text = _personData.LifeExpectancy.ToString();
+            _personData.Person.LifeExpectancy--;
+            lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
             _playerPoints.UpdateYears(1);
             _playerPoints.UpdateKarma(-1);
         }
@@ -104,7 +104,7 @@ public class GiftReapUI : MonoBehaviour
 
     void CalculateKarma()
     {
-        if(_personData.LifeExpectancy >= _personData.Person.EventYear)
+        if(_personData.Person.LifeExpectancy >= _personData.Person.EventYear)
         {
             switch (_personData.Person.karmaEvent.karmaAlignment)
             {
