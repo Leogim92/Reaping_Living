@@ -46,6 +46,6 @@ public class PersonBase : ScriptableObject
         lifeExpectancy = _personDetailsDB.GenerateLifeExpectancy(age);
         eventYear = _personDetailsDB.GenerateEventYear(age, lifeExpectancy);
         karmaEvent = _personDetailsDB.GenerateKarmaEvent();
-
     }
+
 }

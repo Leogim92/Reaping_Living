@@ -78,7 +78,6 @@ public class GiftReapUI : MonoBehaviour
     {
         if (_playerPoints.YearsCurrency > 0)
         {
-
             _personData.Person.LifeExpectancy++;
             lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
             _playerPoints.UpdateYears(-1);
