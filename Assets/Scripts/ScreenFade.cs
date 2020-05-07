@@ -9,14 +9,16 @@ public class ScreenFade : MonoBehaviour
     private void Awake()
     {
         DoorTransporter.OnDoorEnter += FadeInOut;
+        NextLevelTrigger.OnNextLevelTrigger += FadeInOut;
     }
 
     private void FadeInOut()
     {
-        FadeTrigger();
-    }
-    void FadeTrigger()
-    {
         fadeCanvas.GetComponent<Animator>().SetTrigger("Fade");
+    }
+    private void OnDestroy()
+    {
+        DoorTransporter.OnDoorEnter -= FadeInOut;
+        NextLevelTrigger.OnNextLevelTrigger -= FadeInOut;
     }
 }

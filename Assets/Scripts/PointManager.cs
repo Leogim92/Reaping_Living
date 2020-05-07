@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
-    [SerializeField] int yearsCurrency = 20;
-    [SerializeField] int karma = 0;
-    
+    [SerializeField] PointContainer pointContainer = null;
     public int YearsCurrency
     {
-        get { return yearsCurrency; }
-        set { yearsCurrency = value; }
+        get { return pointContainer.yearsCurrency; }
+        set { pointContainer.yearsCurrency = value; }
     }
     public int Karma
     {
-        get { return karma; }
-        set { karma = value; }
+        get { return pointContainer.karma; }
+        set { pointContainer.karma = value; }
     }
     public void UpdateYears(int yearsValue)
     {
-        yearsCurrency += yearsValue;
+        pointContainer.yearsCurrency += yearsValue;
     }
     public void UpdateKarma(int karmaValue)
     {
-        karma += karmaValue;
+        pointContainer.karma += karmaValue;
     }
 }

@@ -8,15 +8,12 @@ public class ReapInteraction : MonoBehaviour
 {
     [SerializeField] float distanceToInteract = 2f;
     PointManager points;
+    Transform hitPoint;
+
+    bool hasInteracted;
     private void Awake()
     {
         points = GetComponent<PointManager>();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        IMouseInteractable interactableObject = other.transform.GetComponent<IMouseInteractable>();
-        if (interactableObject != null) interactableObject.StartInteraction(points);
-        Debug.Log("On trigger enter");
     }
     private void Update()
     {
@@ -27,12 +24,24 @@ public class ReapInteraction : MonoBehaviour
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out hit) && Vector3.Distance(this.transform.position, hit.transform.position) < distanceToInteract)
+                if (Physics.Raycast(ray, out hit))
                 {
-                    IMouseInteractable interactableObject = hit.transform.GetComponent<IMouseInteractable>();
-                    if (interactableObject != null) interactableObject.StartInteraction(points);
+                    hitPoint = hit.transform;
+                    hasInteracted = true;
                 }
             }
         }
+        if (hasInteracted)
+            if (Vector3.Distance(this.transform.position, hitPoint.position) < distanceToInteract)
+            {
+                TriggerInteractableObject(hitPoint);
+                hasInteracted = false;
+            }
+                
+    }
+    public void TriggerInteractableObject(Transform hit)
+    {
+        IMouseInteractable interactableObject = hit.transform.GetComponent<IMouseInteractable>();
+        if (interactableObject != null) interactableObject.StartInteraction(points);
     }
 }

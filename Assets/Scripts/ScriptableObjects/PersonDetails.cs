@@ -32,7 +32,7 @@ public class PersonDetails : ScriptableObject
     }
     public int GenerateEventYear(int age, int lifeExpectancy)
     {
-        int extraYears = Random.Range(30, 61);
+        int extraYears = Random.Range(15, 31);
         return age + extraYears;
     }
     public int GenerateLifeExpectancy(int age)

@@ -36,15 +36,15 @@ public class GiftReapUI : MonoBehaviour
     {
         if (!fateSealState)
         {
-            giftYearsButton.interactable = !fateSealState;
-            reapYearsButton.interactable = !fateSealState;
-            sealFateButton.interactable = !fateSealState;
+            giftYearsButton.interactable = true;
+            reapYearsButton.interactable = true;
+            sealFateButton.interactable = true;
         }
         else
         {
-            giftYearsButton.interactable = !fateSealState;
-            reapYearsButton.interactable = !fateSealState;
-            sealFateButton.interactable = !fateSealState;
+            giftYearsButton.interactable = false;
+            reapYearsButton.interactable = false;
+            sealFateButton.interactable = false;
         }
     }
 
@@ -64,35 +64,42 @@ public class GiftReapUI : MonoBehaviour
         eventTypeText.text = UpperFirst(_personData.Person.karmaEvent.karmaAlignment.ToString());
         eventDescriptionText.text = _personData.Person.karmaEvent.eventDescription;
     }
-    //Buttons
 
+    //Buttons
     public void GiftYears()
     {
-        RaiseYears();
+        if (_playerPoints.YearsCurrency > 0 && _personData.Person.LifeExpectancy < 100)
+        {
+            int yearsToGift = 1;
+            if (Input.GetKey(KeyCode.LeftShift) && _personData.Person.LifeExpectancy < 96
+                && _playerPoints.YearsCurrency >= 5)
+                yearsToGift = 5;
+            else
+                yearsToGift = 1;
+
+            UpdateYears(yearsToGift);
+        }
     }
     public void ReapYears()
     {
-        LowYears();
-    }
-    void RaiseYears()
-    {
-        if (_playerPoints.YearsCurrency > 0 && _personData.Person.LifeExpectancy <100)
-        {
-            _personData.Person.LifeExpectancy++;
-            lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
-            _playerPoints.UpdateYears(-1);
-            _playerPoints.UpdateKarma(1);
-        }
-    }
-    void LowYears()
-    {
         if (_playerPoints.YearsCurrency < 100 && _personData.Person.LifeExpectancy > _personData.Person.Age)
         {
-            _personData.Person.LifeExpectancy--;
-            lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
-            _playerPoints.UpdateYears(1);
-            _playerPoints.UpdateKarma(-1);
+            int yearsToReap = 1;
+            if (Input.GetKey(KeyCode.LeftShift) && _personData.Person.LifeExpectancy > _personData.Person.Age + 5
+                && _playerPoints.YearsCurrency <= 95)
+                yearsToReap = 5;
+            else
+                yearsToReap = 1;
+
+            UpdateYears(-yearsToReap);
         }
+    }
+    private void UpdateYears(int yearsToGift)
+    {
+        _personData.Person.LifeExpectancy += yearsToGift;
+        lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
+        _playerPoints.UpdateYears(-yearsToGift);
+        _playerPoints.UpdateKarma(yearsToGift);
     }
     public void SealFate()
     {
@@ -105,17 +112,27 @@ public class GiftReapUI : MonoBehaviour
     {
         if(_personData.Person.LifeExpectancy >= _personData.Person.EventYear)
         {
-            switch (_personData.Person.karmaEvent.karmaAlignment)
-            {
-                case KarmaEvent.Karma.good:
-                    _playerPoints.UpdateKarma(50);
-                    break;
-                case KarmaEvent.Karma.bad:
-                    _playerPoints.UpdateKarma(-50);
-                    break;
-            }
+            KarmaModifier(50);
+        }
+        else
+        {
+            KarmaModifier(-25);
         }
     }
+
+    private void KarmaModifier(int karmaPoints)
+    {
+        switch (_personData.Person.karmaEvent.karmaAlignment)
+        {
+            case KarmaEvent.Karma.good:
+                _playerPoints.UpdateKarma(karmaPoints);
+                break;
+            case KarmaEvent.Karma.bad:
+                _playerPoints.UpdateKarma(-karmaPoints);
+                break;
+        }
+    }
+
     private string UpperFirst(string text)
     {
         return char.ToUpper(text[0]) +

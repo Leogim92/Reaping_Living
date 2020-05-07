@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d14d3858cbf7940bec63fa778dd77f, type: 3}
+  m_Name: New Point Container
+  m_EditorClassIdentifier: 
+  defaultYearsCurrency: 50
+  defaultKarma: 0
+  yearsCurrency: 50
+  karma: 0
