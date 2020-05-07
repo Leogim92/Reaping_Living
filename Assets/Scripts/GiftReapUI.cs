@@ -76,7 +76,7 @@ public class GiftReapUI : MonoBehaviour
     }
     void RaiseYears()
     {
-        if (_playerPoints.YearsCurrency > 0)
+        if (_playerPoints.YearsCurrency > 0 && _personData.Person.LifeExpectancy <100)
         {
             _personData.Person.LifeExpectancy++;
             lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();

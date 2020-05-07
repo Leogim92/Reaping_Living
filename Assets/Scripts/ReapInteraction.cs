@@ -2,33 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ReapInteraction : MonoBehaviour
 {
-    [SerializeField] GiftReapUI giftReapUI = null;
-    [SerializeField] Texture2D cursorTexture = null;
+    [SerializeField] float distanceToInteract = 2f;
     PointManager points;
     private void Awake()
     {
         points = GetComponent<PointManager>();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        IMouseInteractable interactableObject = other.transform.GetComponent<IMouseInteractable>();
+        if (interactableObject != null) interactableObject.StartInteraction(points);
+        Debug.Log("On trigger enter");
+    }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit) && hit.transform.GetComponent<PersonData>())
+            if (Input.GetMouseButtonDown(0))
             {
-                FireUpReapGiftUI(hit.transform.GetComponent<PersonData>());
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit) && Vector3.Distance(this.transform.position, hit.transform.position) < distanceToInteract)
+                {
+                    IMouseInteractable interactableObject = hit.transform.GetComponent<IMouseInteractable>();
+                    if (interactableObject != null) interactableObject.StartInteraction(points);
+                }
             }
         }
-    }
-    private void FireUpReapGiftUI(PersonData personData)
-    {
-        PersonData _personData = personData;
-        giftReapUI.PassReaperAndPersonData(personData, points);
-        giftReapUI.TriggerReapGiftUI(true);
     }
 }
