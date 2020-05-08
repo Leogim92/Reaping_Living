@@ -14,5 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultYearsCurrency: 50
   defaultKarma: 0
-  yearsCurrency: 29
-  karma: 21
+  defaultYearsCurrencyTotal: 100
+  defaultKarmaEventOnValue: 50
+  defaultKarmaEventOffValue: 25
+  defaultKarmaYearModifier: 2
+  defaultNavMeshSpeed: 10
+  defaultInteractionRange: 4
+  yearsCurrency: 100
+  karma: -50
+  yearsCurrencyTotal: 100
+  karmaEventOnValue: 50
+  karmaEventOffValue: 25
+  karmaYearModififer: 2
+  navMeshSpeed: 10
+  interactionRange: 4

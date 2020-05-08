@@ -9,10 +9,16 @@ public class PlayerMovement : MonoBehaviour
     Camera cameraMain;
     Vector3 playerDestination;
     NavMeshAgent playerNavMesh;
+    PlayerStats playerStats;
     private void Awake()
     {
         cameraMain = Camera.main;
         playerNavMesh = GetComponent<NavMeshAgent>();
+        playerStats = GetComponent<PlayerStats>();
+    }
+    private void Start()
+    {
+        playerNavMesh.speed = playerStats.NavMeshSpeed;
     }
     private void Update()
     {
