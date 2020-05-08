@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d14d3858cbf7940bec63fa778dd77f, type: 3}
   m_Name: Reaper Stats
   m_EditorClassIdentifier: 
-  defaultYearsCurrency: 50
+  defaultYearsCurrency: 20
   defaultKarma: 0
   defaultYearsCurrencyTotal: 100
-  defaultKarmaEventOnValue: 50
-  defaultKarmaEventOffValue: 25
-  defaultKarmaYearModifier: 2
+  defaultGoodKarmaEventBonus: 0
+  defaultBadKarmaEventBonus: 0
   defaultNavMeshSpeed: 10
   defaultInteractionRange: 4
-  yearsCurrency: 100
-  karma: -50
+  defaultKarmaGoal: 0
+  yearsCurrency: 86
+  karma: 84
   yearsCurrencyTotal: 100
-  karmaEventOnValue: 50
-  karmaEventOffValue: 25
-  karmaYearModififer: 2
+  goodKarmaEventBonus: 0
+  badKarmaEventBonus: 0
   navMeshSpeed: 10
   interactionRange: 4
+  karmaGoal: 62

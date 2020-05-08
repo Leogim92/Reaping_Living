@@ -17,6 +17,10 @@ public class ReapInteraction : MonoBehaviour
         cameraMain = Camera.main;
         playerStats = GetComponent<PlayerStats>();
     }
+    private void Start()
+    {
+        distanceToInteract = playerStats.InteractionRange;
+    }
     private void Update()
     {
         if (!EventSystem.current.IsPointerOverGameObject())

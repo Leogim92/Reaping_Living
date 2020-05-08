@@ -76,16 +76,15 @@ public class GiftReapUI : MonoBehaviour
     {
         if (_playerStats.YearsCurrency > 0 && _personData.Person.LifeExpectancy < _playerStats.TotalYears)
         {
-            int yearsToGift = _playerStats.KarmaYearModifier;
-
-            if (Input.GetKey(KeyCode.LeftShift)
-                && _personData.Person.LifeExpectancy <= _playerStats.TotalYears - _playerStats.KarmaYearModifier * SHIFT_VALUE
-                && _playerStats.YearsCurrency >= _playerStats.KarmaYearModifier * SHIFT_VALUE)
+            int yearsToGift = 1;
+            if (Input.GetKey(KeyCode.LeftShift) &&
+                _personData.Person.LifeExpectancy <= _playerStats.TotalYears - SHIFT_VALUE &&
+                _playerStats.YearsCurrency >= SHIFT_VALUE)
             {
-                yearsToGift = _playerStats.KarmaYearModifier * SHIFT_VALUE;
+                yearsToGift = SHIFT_VALUE;
             }
             else
-                yearsToGift = _playerStats.KarmaYearModifier;
+                yearsToGift = 1;
 
             UpdateYears(yearsToGift);
         }
@@ -94,15 +93,15 @@ public class GiftReapUI : MonoBehaviour
     {
         if (_playerStats.YearsCurrency < _playerStats.TotalYears && _personData.Person.LifeExpectancy > _personData.Person.Age)
         {
-            int yearsToReap = _playerStats.KarmaYearModifier;
+            int yearsToReap = 1;
             if (Input.GetKey(KeyCode.LeftShift) &&
-                _personData.Person.LifeExpectancy > _personData.Person.Age + _playerStats.KarmaYearModifier * SHIFT_VALUE
-                && _playerStats.YearsCurrency <= _playerStats.TotalYears - _playerStats.KarmaYearModifier * SHIFT_VALUE)
+                _personData.Person.LifeExpectancy > _personData.Person.Age + SHIFT_VALUE &&
+                _playerStats.YearsCurrency <= _playerStats.TotalYears - SHIFT_VALUE)
             {
-                yearsToReap = _playerStats.KarmaYearModifier * SHIFT_VALUE;
+                yearsToReap = SHIFT_VALUE;
             }
             else
-                yearsToReap = _playerStats.KarmaYearModifier;
+                yearsToReap = 1;
 
             UpdateYears(-yearsToReap);
         }
@@ -112,7 +111,7 @@ public class GiftReapUI : MonoBehaviour
         _personData.Person.LifeExpectancy += yearValue;
         lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
         _playerStats.YearsCurrency += -yearValue;
-        _playerStats.Karma +=yearValue;
+        _playerStats.Karma += yearValue;
     }
     public void SealFate()
     {
@@ -125,11 +124,11 @@ public class GiftReapUI : MonoBehaviour
     {
         if(_personData.Person.LifeExpectancy >= _personData.Person.EventYear)
         {
-            KarmaModifier(_playerStats.KarmaEventOn);
+            KarmaModifier(_playerStats.FullfilledEventValue);
         }
         else
         {
-            KarmaModifier(-_playerStats.KarmaEventOff);
+            KarmaModifier(-_playerStats.NonFullfilledEventValue);
         }
     }
 
@@ -138,10 +137,12 @@ public class GiftReapUI : MonoBehaviour
         switch (_personData.Person.karmaEvent.karmaAlignment)
         {
             case KarmaEvent.Karma.good:
-                _playerStats.Karma += karmaPoints;
+                if (karmaPoints > 0) _playerStats.Karma += karmaPoints + _playerStats.GoodKarmaBonus;
+                else _playerStats.Karma += karmaPoints;
                 break;
             case KarmaEvent.Karma.bad:
-                _playerStats.Karma += -karmaPoints;
+                if (karmaPoints > 0) _playerStats.Karma += -karmaPoints;
+                else _playerStats.Karma += -karmaPoints + _playerStats.BadKarmaBonus; 
                 break;
         }
     }

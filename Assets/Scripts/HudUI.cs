@@ -9,6 +9,7 @@ public class HudUI : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI yearCurrencyText = null;
     [SerializeField] TextMeshProUGUI karmaText = null;
+    [SerializeField] TextMeshProUGUI karmaGoal = null;
     private void Awake()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
@@ -17,5 +18,6 @@ public class HudUI : MonoBehaviour
     {
         yearCurrencyText.text = playerStats.YearsCurrency.ToString();
         karmaText.text = playerStats.Karma.ToString();
+        karmaGoal.text = "Karma Goal: " + playerStats.KarmaGoal;
     }
 }

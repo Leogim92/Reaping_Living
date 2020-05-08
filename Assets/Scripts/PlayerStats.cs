@@ -5,6 +5,16 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] ReaperStats reaperStats = null;
+    public int FullfilledEventValue
+    {
+        get { return reaperStats.fullfilledEventValue; }
+        set { reaperStats.fullfilledEventValue = value; }
+    }
+    public int NonFullfilledEventValue
+    {
+        get { return reaperStats.nonFullfilledEventValue; }
+        set { reaperStats.nonFullfilledEventValue = value; }
+    }
     public int YearsCurrency
     {
         get { return reaperStats.yearsCurrency; }
@@ -20,20 +30,15 @@ public class PlayerStats : MonoBehaviour
         get { return reaperStats.yearsCurrencyTotal; }
         set { reaperStats.yearsCurrencyTotal = value; }
     }
-    public int KarmaEventOn
+    public int GoodKarmaBonus
     {
-        get { return reaperStats.karmaEventOnValue; }
-        set { reaperStats.karmaEventOnValue = value; }
+        get { return reaperStats.goodKarmaEventBonus; }
+        set { reaperStats.goodKarmaEventBonus = value; }
     }
-    public int KarmaEventOff
+    public int BadKarmaBonus
     {
-        get { return reaperStats.karmaEventOffValue; }
-        set { reaperStats.karmaEventOffValue = value; }
-    }
-    public int KarmaYearModifier
-    {
-        get { return reaperStats.karmaYearModififer; }
-        set { reaperStats.karmaYearModififer = value; }
+        get { return reaperStats.badKarmaEventBonus; }
+        set { reaperStats.badKarmaEventBonus = value; }
     }
     public int NavMeshSpeed
     {
@@ -44,5 +49,10 @@ public class PlayerStats : MonoBehaviour
     {
         get { return reaperStats.interactionRange; }
         set { reaperStats.interactionRange = value; }
+    }
+    public int KarmaGoal
+    {
+        get { return reaperStats.karmaGoal; }
+        set { reaperStats.karmaGoal = value; }
     }
 }
