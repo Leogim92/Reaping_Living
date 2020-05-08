@@ -45,9 +45,9 @@ public class PersonData : MonoBehaviour, IMouseInteractable
     {
         Cursor.SetCursor(mouseCursor, Vector2.zero, CursorMode.Auto);
     }
-    public void StartInteraction(PointManager playerPoints)
+    public void StartInteraction(PlayerStats playerStats)
     {
-        giftReapUI.PassReaperAndPersonData(this, playerPoints);
+        giftReapUI.PassReaperAndPersonData(this, playerStats);
         giftReapUI.TriggerReapGiftUI(true);
         StartCoroutine(DefaultCursor());
         OnInteractionStart?.Invoke();

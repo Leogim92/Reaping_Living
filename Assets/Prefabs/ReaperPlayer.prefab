@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a5ef2e897d81c41930bbc312863d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointContainer: {fileID: 11400000, guid: b62d8e6bb7e0f734c949771cf5d9218d, type: 2}
+  reaperStats: {fileID: 11400000, guid: b62d8e6bb7e0f734c949771cf5d9218d, type: 2}
 --- !u!1001 &3471135687160757563
 PrefabInstance:
   m_ObjectHideFlags: 0

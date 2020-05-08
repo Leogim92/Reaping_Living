@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Point Container",menuName ="Create Point Container")]
-public class PointContainer : ScriptableObject
+public class ReaperStats : ScriptableObject
 {
     [SerializeField] int defaultYearsCurrency = 20;
     [SerializeField] int defaultKarma = 0;

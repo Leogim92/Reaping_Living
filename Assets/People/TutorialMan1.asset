@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: TutorialMan1
   m_EditorClassIdentifier: 
   firstName: Tutorial
-  lastName: Man
+  lastName: Man1
   story: This is my story
   age: 20
   eventYear: 0
-  lifeExpectancy: 47
+  lifeExpectancy: 59
   karmaEvent: {fileID: 0}

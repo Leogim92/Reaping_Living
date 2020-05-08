@@ -15,7 +15,7 @@ public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
     {
         peopleInScene = FindObjectsOfType<PersonData>();
     }
-    public void StartInteraction( PointManager playerPoints)
+    public void StartInteraction( PlayerStats playerStats)
     {
         foreach (PersonData person in peopleInScene)
         {
@@ -25,13 +25,12 @@ public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
                 return;
             }
         }
-        LoadNextLevel(playerPoints);
+        LoadNextLevel();
     }
 
-    private void LoadNextLevel(PointManager playerPoints)
+    private void LoadNextLevel()
     {
         OnNextLevelTrigger();
-        //hand player points to singleton
         Invoke("LoadScene",1.5f);
     }
 

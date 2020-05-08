@@ -5,17 +5,17 @@ using TMPro;
 
 public class HudUI : MonoBehaviour
 {
-    PointManager playerPoints;
+    PlayerStats playerStats;
 
     [SerializeField] TextMeshProUGUI yearCurrencyText = null;
     [SerializeField] TextMeshProUGUI karmaText = null;
     private void Awake()
     {
-        playerPoints = GameObject.FindGameObjectWithTag("Player").GetComponent<PointManager>();
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
     void Update()
     {
-        yearCurrencyText.text = playerPoints.YearsCurrency.ToString();
-        karmaText.text = playerPoints.Karma.ToString();
+        yearCurrencyText.text = playerStats.YearsCurrency.ToString();
+        karmaText.text = playerStats.Karma.ToString();
     }
 }

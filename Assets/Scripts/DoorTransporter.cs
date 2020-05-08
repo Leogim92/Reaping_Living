@@ -31,10 +31,10 @@ public class DoorTransporter : MonoBehaviour, IMouseInteractable
         Cursor.SetCursor(mouseCursor, Vector2.zero, CursorMode.Auto);
     }
 
-    public void StartInteraction(PointManager playerPoints)
+    public void StartInteraction(PlayerStats playerStats)
     {
         OnDoorEnter?.Invoke();
-        NavMeshAgent playerAI = playerPoints.transform.GetComponent<NavMeshAgent>();
+        NavMeshAgent playerAI = playerStats.transform.GetComponent<NavMeshAgent>();
         StartCoroutine(WarpPlayer(playerAI));
     }
     IEnumerator WarpPlayer(NavMeshAgent playerAI)

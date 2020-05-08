@@ -6,10 +6,12 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Camera cameraMain;
     Vector3 playerDestination;
     NavMeshAgent playerNavMesh;
     private void Awake()
     {
+        cameraMain = Camera.main;
         playerNavMesh = GetComponent<NavMeshAgent>();
     }
     private void Update()
@@ -19,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = cameraMain.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
                 {

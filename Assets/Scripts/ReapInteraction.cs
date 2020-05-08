@@ -7,13 +7,15 @@ using UnityEngine.EventSystems;
 public class ReapInteraction : MonoBehaviour
 {
     [SerializeField] float distanceToInteract = 2f;
-    PointManager points;
+    PlayerStats playerStats;
     Transform hitPoint;
+    Camera cameraMain;
 
     bool hasInteracted;
     private void Awake()
     {
-        points = GetComponent<PointManager>();
+        cameraMain = Camera.main;
+        playerStats = GetComponent<PlayerStats>();
     }
     private void Update()
     {
@@ -22,7 +24,7 @@ public class ReapInteraction : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = cameraMain.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
                 {
@@ -42,6 +44,6 @@ public class ReapInteraction : MonoBehaviour
     public void TriggerInteractableObject(Transform hit)
     {
         IMouseInteractable interactableObject = hit.transform.GetComponent<IMouseInteractable>();
-        if (interactableObject != null) interactableObject.StartInteraction(points);
+        if (interactableObject != null) interactableObject.StartInteraction(playerStats);
     }
 }

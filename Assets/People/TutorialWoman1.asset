@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca189e68150984a4c8734a56466bad1e, type: 3}
   m_Name: TutorialWoman1
   m_EditorClassIdentifier: 
-  _personDetailsDB: {fileID: 0}
+  firstName: Tutorial
+  lastName: Woman1
+  story: This is my girl story
+  age: 18
+  eventYear: 25
+  lifeExpectancy: 26
   karmaEvent: {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}

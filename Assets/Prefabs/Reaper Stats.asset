@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83d14d3858cbf7940bec63fa778dd77f, type: 3}
-  m_Name: PointContainer
+  m_Name: Reaper Stats
   m_EditorClassIdentifier: 
   defaultYearsCurrency: 50
   defaultKarma: 0
-  yearsCurrency: 50
-  karma: 0
+  yearsCurrency: 29
+  karma: 21

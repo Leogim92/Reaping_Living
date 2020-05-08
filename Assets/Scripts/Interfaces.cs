@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMouseInteractable
 {
-    void StartInteraction(PointManager points);
+    void StartInteraction(PlayerStats playerStats);
     void ChangeMouseCursor(Texture2D mouseCursor);
 }

@@ -8,7 +8,7 @@ using TMPro;
 public class GiftReapUI : MonoBehaviour
 {
     PersonData _personData;
-    PointManager _playerPoints;
+    PlayerStats _playerStats;
 
     [SerializeField] Canvas reapGiftCanvas = null;
 
@@ -48,10 +48,10 @@ public class GiftReapUI : MonoBehaviour
         }
     }
 
-    public void PassReaperAndPersonData(PersonData personData, PointManager playerPoints)
+    public void PassReaperAndPersonData(PersonData personData, PlayerStats playerStats)
     {
         _personData = personData;
-        _playerPoints = playerPoints;
+        _playerStats = playerStats;
         SetPersonData();
     }
     public void SetPersonData()
@@ -73,11 +73,11 @@ public class GiftReapUI : MonoBehaviour
     //Buttons
     public void GiftYears()
     {
-        if (_playerPoints.YearsCurrency > 0 && _personData.Person.LifeExpectancy < 100)
+        if (_playerStats.YearsCurrency > 0 && _personData.Person.LifeExpectancy < 100)
         {
             int yearsToGift = 1;
             if (Input.GetKey(KeyCode.LeftShift) && _personData.Person.LifeExpectancy < 96
-                && _playerPoints.YearsCurrency >= 5)
+                && _playerStats.YearsCurrency >= 5)
                 yearsToGift = 5;
             else
                 yearsToGift = 1;
@@ -87,11 +87,11 @@ public class GiftReapUI : MonoBehaviour
     }
     public void ReapYears()
     {
-        if (_playerPoints.YearsCurrency < 100 && _personData.Person.LifeExpectancy > _personData.Person.Age)
+        if (_playerStats.YearsCurrency < 100 && _personData.Person.LifeExpectancy > _personData.Person.Age)
         {
             int yearsToReap = 1;
             if (Input.GetKey(KeyCode.LeftShift) && _personData.Person.LifeExpectancy > _personData.Person.Age + 5
-                && _playerPoints.YearsCurrency <= 95)
+                && _playerStats.YearsCurrency <= 95)
                 yearsToReap = 5;
             else
                 yearsToReap = 1;
@@ -103,8 +103,8 @@ public class GiftReapUI : MonoBehaviour
     {
         _personData.Person.LifeExpectancy += yearsToGift;
         lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
-        _playerPoints.UpdateYears(-yearsToGift);
-        _playerPoints.UpdateKarma(yearsToGift);
+        _playerStats.UpdateYears(-yearsToGift);
+        _playerStats.UpdateKarma(yearsToGift);
     }
     public void SealFate()
     {
@@ -130,10 +130,10 @@ public class GiftReapUI : MonoBehaviour
         switch (_personData.Person.karmaEvent.karmaAlignment)
         {
             case KarmaEvent.Karma.good:
-                _playerPoints.UpdateKarma(karmaPoints);
+                _playerStats.UpdateKarma(karmaPoints);
                 break;
             case KarmaEvent.Karma.bad:
-                _playerPoints.UpdateKarma(-karmaPoints);
+                _playerStats.UpdateKarma(-karmaPoints);
                 break;
         }
     }
