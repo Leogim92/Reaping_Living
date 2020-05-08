@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a26d1dc14d9a2384b8bb2b1bc5ca480c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  giftReapUI: {fileID: 0}
   mouseCursor: {fileID: 2800000, guid: 575fd79570cbac14c83db6197359acec, type: 3}
   personDetailsDB: {fileID: 11400000, guid: 14b5d3ed28716bd48bd95f01ee07d72b, type: 2}
+  person: {fileID: 11400000, guid: d2d0cf39bc8afe842a632f9ffe7d5d95, type: 2}
+  isRandomlyGenerated: 1

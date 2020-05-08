@@ -1,19 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PersonData : MonoBehaviour, IMouseInteractable
 {
+    public event Action OnInteractionStart;
+
     GiftReapUI giftReapUI;
     [SerializeField] Texture2D mouseCursor=null;
     [SerializeField] PersonDetails personDetailsDB =null;
-    PersonBase person = null;
+    [SerializeField] PersonBase person = null;
+    [SerializeField] bool isRandomlyGenerated = false;
     bool isFateSealed = false;
     private void Awake()
     {
         giftReapUI = FindObjectOfType<GiftReapUI>();
-        person = PersonBase.CreateInstance(personDetailsDB);
+        if(isRandomlyGenerated)person = PersonBase.CreateInstance(personDetailsDB);
     }
     public bool IsFateSealed
     {
@@ -46,6 +50,7 @@ public class PersonData : MonoBehaviour, IMouseInteractable
         giftReapUI.PassReaperAndPersonData(this, playerPoints);
         giftReapUI.TriggerReapGiftUI(true);
         StartCoroutine(DefaultCursor());
+        OnInteractionStart?.Invoke();
     }
     IEnumerator DefaultCursor()
     {

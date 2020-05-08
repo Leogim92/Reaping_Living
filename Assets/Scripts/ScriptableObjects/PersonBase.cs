@@ -6,14 +6,14 @@ using UnityEngine;
 public class PersonBase : ScriptableObject
 {
     
-    [SerializeField]PersonDetails _personDetailsDB = null;
+    PersonDetails _personDetailsDB = null;
 
-    string firstName ="First Name";
-    string lastName ="Last Name";
-    string story ="Story Description";
-    int age = 0;
-    int eventYear = 0;
-    int lifeExpectancy = 0;
+    [SerializeField] string firstName ="First Name";
+    [SerializeField] string lastName ="Last Name";
+    [SerializeField] string story ="Story Description";
+    [SerializeField] int age = 0;
+    [SerializeField] int eventYear = 0;
+    [SerializeField] int lifeExpectancy = 0;
 
     public KarmaEvent karmaEvent;
     public string Name { get { return firstName + " " + lastName; } }

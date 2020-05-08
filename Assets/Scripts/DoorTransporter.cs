@@ -6,11 +6,14 @@ using UnityEngine.EventSystems;
 
 public class DoorTransporter : MonoBehaviour, IMouseInteractable
 {
+    public event Action OnInteractionStart;
+    public static event Action OnDoorEnter;
+
     [SerializeField] Texture2D mouseCursor = null;
     [SerializeField] Transform destinationPoint = null;
     [SerializeField] float warpDelay = 1.5f;
 
-    public static event Action OnDoorEnter;
+    
     private void OnMouseOver()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
@@ -37,6 +40,7 @@ public class DoorTransporter : MonoBehaviour, IMouseInteractable
     IEnumerator WarpPlayer(NavMeshAgent playerAI)
     {
         yield return new WaitForSeconds(warpDelay);
+        OnInteractionStart?.Invoke();
         playerAI.Warp(destinationPoint.position);
     }
 }

@@ -24,8 +24,8 @@ public class GiftReapUI : MonoBehaviour
     [SerializeField] Button giftYearsButton = null;
     [SerializeField] Button reapYearsButton = null;
     [SerializeField] Button sealFateButton = null;
-    //UI Filling
 
+    //UI Filling
     public void TriggerReapGiftUI(bool value)
     {
         reapGiftCanvas.enabled = value;
@@ -61,6 +61,11 @@ public class GiftReapUI : MonoBehaviour
         storyText.text = _personData.Person.Story;
         lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
         eventYearText.text = _personData.Person.EventYear.ToString();
+        if (_personData.Person.karmaEvent !=null) SetKarmaDetails();
+    }
+
+    private void SetKarmaDetails()
+    {
         eventTypeText.text = UpperFirst(_personData.Person.karmaEvent.karmaAlignment.ToString());
         eventDescriptionText.text = _personData.Person.karmaEvent.eventDescription;
     }
