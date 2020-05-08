@@ -55,4 +55,8 @@ public class PlayerStats : MonoBehaviour
         get { return reaperStats.karmaGoal; }
         set { reaperStats.karmaGoal = value; }
     }
+    public void ResetReaperStats()
+    {
+        reaperStats.ResetReaperStats();
+    }
 }

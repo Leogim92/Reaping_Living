@@ -13,16 +13,22 @@ public class CalculateKarmaGoal : MonoBehaviour
     }
     private void Start()
     {
-        foreach (PersonData person in peopleInScene)
-        {
-            if (person.Person.karmaEvent.karmaAlignment == KarmaEvent.Karma.good)
-            {
-                playerStats.KarmaGoal += playerStats.FullfilledEventValue;
-            }
-            else
-                playerStats.KarmaGoal += playerStats.NonFullfilledEventValue - (person.Person.LifeExpectancy - person.Person.EventYear);
-        }
+        CalculateGoal();
     }
 
-
+    private void CalculateGoal()
+    {
+        foreach (PersonData person in peopleInScene)
+        {
+            if (person.Person.karmaEvent)
+            {
+                if (person.Person.karmaEvent.karmaAlignment == KarmaEvent.Karma.good)
+                {
+                    playerStats.KarmaGoal += playerStats.FullfilledEventValue;
+                }
+                else 
+                    playerStats.KarmaGoal += playerStats.NonFullfilledEventValue - (person.Person.LifeExpectancy - person.Person.EventYear);
+            }
+        }
+    }
 }

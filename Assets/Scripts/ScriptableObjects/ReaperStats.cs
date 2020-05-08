@@ -29,7 +29,7 @@ public class ReaperStats : ScriptableObject
 
     [HideInInspector] public int karmaGoal;
 
-    private void OnEnable()
+    public void ResetReaperStats()
     {
         yearsCurrency = defaultYearsCurrency;
         karma = defaultKarma;
