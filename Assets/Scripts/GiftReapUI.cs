@@ -61,7 +61,7 @@ public class GiftReapUI : MonoBehaviour
         storyText.text = _personData.Person.Story;
         lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
         eventYearText.text = _personData.Person.EventYear.ToString();
-        if (_personData.Person.karmaEvent !=null) SetKarmaDetails();
+        if (_personData.Person.karmaEvent) SetKarmaDetails();
     }
 
     private void SetKarmaDetails()
@@ -110,7 +110,7 @@ public class GiftReapUI : MonoBehaviour
     {
         _personData.IsFateSealed = true;
         SettingUIButtonsState(true);
-        CalculateKarma();
+        if (_personData.Person.karmaEvent) CalculateKarma();
     }
 
     void CalculateKarma()

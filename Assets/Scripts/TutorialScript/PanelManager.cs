@@ -6,31 +6,19 @@ using UnityEngine.UI;
 public class PanelManager : MonoBehaviour
 {
     [SerializeField] List<TutorialPanelLink> linkedPanelTriggers = null;
+    [Space]
+    [SerializeField] GameObject firstPanel = null;
+    [Space]
     [SerializeField] List<GameObject> tutorialPanels = null;
-    int panelIndex;
-    private void Awake()
-    {
-        GetTutorialPanelsInScene();
-    }
 
-    private void GetTutorialPanelsInScene()
-    {
-        
-        foreach (Image panel in GetComponentsInChildren<Image>())
-        {
-            if (!panel.gameObject.GetComponent<Button>())
-            {
-                tutorialPanels.Add(panel.gameObject);
-                panel.gameObject.SetActive(false);
-            }
-        }
-    }
+    int panelIndex = 0;
     public void DisplayPanel()
     {
         tutorialPanels[panelIndex].SetActive(true);
     }
     public void HidePanel()
     {
+        if(firstPanel) firstPanel.SetActive(false);
         tutorialPanels[panelIndex].SetActive(false);
     }
 

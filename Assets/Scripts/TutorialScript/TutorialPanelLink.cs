@@ -31,7 +31,7 @@ public class TutorialPanelLink : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if(person) person.OnInteractionStart -= ActivatePanel;
+        if (person) person.OnInteractionStart -= ActivatePanel;
         if (door) door.OnInteractionStart -= ActivatePanel;
     }
 }
