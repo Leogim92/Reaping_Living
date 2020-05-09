@@ -25,6 +25,16 @@ public class PlayerStats : MonoBehaviour
         get { return reaperStats.karma; }
         set { reaperStats.karma = value; }
     }
+    public int GoodEventsDone
+    {
+        get { return reaperStats.goodEventsDone; }
+        set { reaperStats.goodEventsDone = value; }
+    }
+    public int BadEventsAvoided
+    {
+        get { return reaperStats.badEventsAvoided; }
+        set { reaperStats.badEventsAvoided = value; }
+    }
     public int TotalYears
     {
         get { return reaperStats.yearsCurrencyTotal; }
@@ -58,5 +68,12 @@ public class PlayerStats : MonoBehaviour
     public void ResetReaperStats()
     {
         reaperStats.ResetReaperStats();
+    }
+
+    //extra hack
+    public bool IsSoundOn
+    {
+        get { return reaperStats.isSoundOn; }
+        set { reaperStats.isSoundOn = value; }
     }
 }

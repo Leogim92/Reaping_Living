@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
+        Cursor.SetCursor(default, Vector2.zero, CursorMode.Auto);
         playerNavMesh.speed = playerStats.NavMeshSpeed;
     }
     private void Update()

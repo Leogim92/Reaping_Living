@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
 {
+    GameObject tutorial = null;
     [SerializeField] Texture2D cursorIcon =null;
-
+    
     PersonData[] peopleInScene;
 
+    public static event Action OnKarmaGoalFailed;
     public static event Action OnNextLevelTrigger;
+    
     private void Awake()
     {
+        tutorial = GameObject.FindGameObjectWithTag("Tutorial");
         peopleInScene = FindObjectsOfType<PersonData>();
     }
     public void StartInteraction( PlayerStats playerStats)
@@ -25,12 +29,17 @@ public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
                 return;
             }
         }
+        if (playerStats.Karma < playerStats.KarmaGoal && !tutorial)
+        {
+            OnKarmaGoalFailed?.Invoke();
+            return;
+        }
         LoadNextLevel();
     }
 
     private void LoadNextLevel()
     {
-        OnNextLevelTrigger();
+        OnNextLevelTrigger?.Invoke();
         Invoke("LoadScene",1.5f);
     }
 

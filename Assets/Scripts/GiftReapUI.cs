@@ -7,6 +7,9 @@ using TMPro;
 
 public class GiftReapUI : MonoBehaviour
 {
+    public static event Action OnGiftReap;
+    public static event Action OnFateSeal;
+
     PersonData _personData;
     PlayerStats _playerStats;
 
@@ -87,6 +90,7 @@ public class GiftReapUI : MonoBehaviour
                 yearsToGift = 1;
 
             UpdateYears(yearsToGift);
+            OnGiftReap?.Invoke();
         }
     }
     public void ReapYears()
@@ -104,6 +108,7 @@ public class GiftReapUI : MonoBehaviour
                 yearsToReap = 1;
 
             UpdateYears(-yearsToReap);
+            OnGiftReap?.Invoke();
         }
     }
     private void UpdateYears(int yearValue)
@@ -118,6 +123,7 @@ public class GiftReapUI : MonoBehaviour
         _personData.IsFateSealed = true;
         SettingUIButtonsState(true);
         if (_personData.Person.karmaEvent) CalculateKarma();
+        OnFateSeal?.Invoke();
     }
 
     void CalculateKarma()
@@ -137,12 +143,20 @@ public class GiftReapUI : MonoBehaviour
         switch (_personData.Person.karmaEvent.karmaAlignment)
         {
             case KarmaEvent.Karma.good:
-                if (karmaPoints > 0) _playerStats.Karma += karmaPoints + _playerStats.GoodKarmaBonus;
+                if (karmaPoints > 0)
+                {
+                    _playerStats.Karma += karmaPoints + _playerStats.GoodKarmaBonus;
+                    _playerStats.GoodEventsDone++;
+                }
                 else _playerStats.Karma += karmaPoints;
                 break;
             case KarmaEvent.Karma.bad:
                 if (karmaPoints > 0) _playerStats.Karma += -karmaPoints;
-                else _playerStats.Karma += -karmaPoints + _playerStats.BadKarmaBonus; 
+                else
+                {
+                    _playerStats.Karma += -karmaPoints + _playerStats.BadKarmaBonus;
+                    _playerStats.BadEventsAvoided++;
+                }
                 break;
         }
     }

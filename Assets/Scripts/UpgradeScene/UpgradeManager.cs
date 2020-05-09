@@ -9,6 +9,7 @@ public class UpgradeManager : MonoBehaviour
     PlayerStats playerStats;
     private void Awake()
     {
+        Cursor.SetCursor(default, Vector2.zero, CursorMode.Auto);
         playerStats = FindObjectOfType<PlayerStats>();
     }
     public void UpgradeTotalYears()

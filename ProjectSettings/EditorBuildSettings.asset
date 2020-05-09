@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TransitionSandbox2.unity
     guid: 3bd510d11ce3a354e86caeaca6ea202e
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 21623a4177b37ce4798942bc619adcd9
   m_configObjects: {}

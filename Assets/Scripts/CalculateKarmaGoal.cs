@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,11 +25,14 @@ public class CalculateKarmaGoal : MonoBehaviour
             {
                 if (person.Person.karmaEvent.karmaAlignment == KarmaEvent.Karma.good)
                 {
-                    playerStats.KarmaGoal += playerStats.FullfilledEventValue;
+                    playerStats.KarmaGoal += playerStats.FullfilledEventValue + (person.Person.LifeExpectancy - person.Person.EventYear);
                 }
-                else 
+                else
+                {
                     playerStats.KarmaGoal += playerStats.NonFullfilledEventValue - (person.Person.LifeExpectancy - person.Person.EventYear);
+                }
             }
         }
+        print(playerStats.KarmaGoal);
     }
 }

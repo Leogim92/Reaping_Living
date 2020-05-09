@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: c34db95f79966704db2b7b76c2358e82,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -375,7 +375,7 @@ PrefabInstance:
     - target: {fileID: 6218281099068015960, guid: 49c389c81479312458686ce5ae321844,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6218281099068015960, guid: 49c389c81479312458686ce5ae321844,
         type: 3}
@@ -454,7 +454,7 @@ PrefabInstance:
     - target: {fileID: 3203387404966940452, guid: 1662e3ec98f0e1a498edbec415a7d650,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3203387404966940452, guid: 1662e3ec98f0e1a498edbec415a7d650,
         type: 3}
@@ -578,7 +578,7 @@ PrefabInstance:
     - target: {fileID: 113506265366127967, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 113506265366127967, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
         type: 3}
@@ -593,6 +593,76 @@ PrefabInstance:
     - target: {fileID: 113506265366127967, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135775997235317599, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135775997235317599, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135775997235317599, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135775997235317599, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847388561812270063, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43.05005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847388561812270063, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.109985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629858842342156002, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629858842342156002, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629858842342156002, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629858842342156002, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108951262974996486, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108951262974996486, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108951262974996486, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108951262974996486, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -756,5 +826,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
