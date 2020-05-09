@@ -6,7 +6,6 @@ using System;
 
 public class HudUI : MonoBehaviour
 {
-    AudioListener audioListener;
     PlayerStats playerStats;
     PersonData [] peopleInScene;
 
@@ -19,14 +18,10 @@ public class HudUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI karmaGoal = null;
     [SerializeField] TextMeshProUGUI goodEventsText = null;
     [SerializeField] TextMeshProUGUI badEventsText = null;
-    [Space]
-    [SerializeField] GameObject pauseMenu=null;
-    [SerializeField] GameObject gameOverMenu = null;
 
     private void Awake()
     {
         playerStats = FindObjectOfType<PlayerStats>();
-        audioListener = FindObjectOfType<AudioListener>();
         peopleInScene = FindObjectsOfType<PersonData>();
     }
     private void Start()
@@ -34,14 +29,13 @@ public class HudUI : MonoBehaviour
         Invoke("StartUI",.1f);
         GiftReapUI.OnGiftReap += UIGiftReapUpdate;
         GiftReapUI.OnFateSeal += UISealFate;
-        NextLevelTrigger.OnKarmaGoalFailed += GameOver;
     }
 
     private void StartUI()
     {
         UIGiftReapUpdate();
         UISealFate();
-        audioListener.enabled = playerStats.IsSoundOn;
+        
         karmaGoal.text = "Karma Goal: " + playerStats.KarmaGoal;
     }
 
@@ -67,25 +61,10 @@ public class HudUI : MonoBehaviour
         }
         fatesToSealText.text = "Fates to Seal: " + fatesToSeal;
     }
-
-    public void EnableDisableSound()
-    {
-        playerStats.IsSoundOn = !audioListener.enabled;
-        audioListener.enabled = !audioListener.enabled;
-    }
-    public void OpenPauseMenu()
-    {
-        pauseMenu.SetActive(true);
-    }
-    private void GameOver()
-    {
-        Time.timeScale = 0;
-        gameOverMenu.SetActive(true);
-    }
+    
     private void OnDestroy()
     {
         GiftReapUI.OnGiftReap -= UIGiftReapUpdate;
         GiftReapUI.OnFateSeal -= UISealFate;
-        NextLevelTrigger.OnKarmaGoalFailed -= GameOver;
     }
 }

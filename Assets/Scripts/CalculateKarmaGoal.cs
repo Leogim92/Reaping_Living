@@ -33,6 +33,5 @@ public class CalculateKarmaGoal : MonoBehaviour
                 }
             }
         }
-        print(playerStats.KarmaGoal);
     }
 }

@@ -6,8 +6,36 @@ using UnityEngine.SceneManagement;
 public class InGameMenusManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu = null;
+    [SerializeField] GameObject gameOverMenu = null;
+    AudioListener audioListener;
+    PlayerStats playerStats;
 
-    public void ClosePauseMenu()
+    private void Awake()
+    {
+        playerStats = FindObjectOfType<PlayerStats>();
+        audioListener = FindObjectOfType<AudioListener>();
+    }
+    private void Start()
+    {
+        audioListener.enabled = playerStats.IsSoundOn;
+        NextLevelTrigger.OnKarmaGoalFailed += GameOver;
+    }
+    private void GameOver()
+    {
+        Time.timeScale = 0;
+        gameOverMenu.SetActive(true);
+    }
+
+    public void EnableDisableSound()
+    {
+        playerStats.IsSoundOn = !audioListener.enabled;
+        audioListener.enabled = !audioListener.enabled;
+    }
+    public void OpenPauseMenu()
+    {
+        pauseMenu.SetActive(true);
+    }
+    public void ResumeGame()
     {
         pauseMenu.SetActive(false);
     }
@@ -26,4 +54,14 @@ public class InGameMenusManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(2);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void OnDestroy()
+    {
+        NextLevelTrigger.OnKarmaGoalFailed -= GameOver;
+    }
+
 }
