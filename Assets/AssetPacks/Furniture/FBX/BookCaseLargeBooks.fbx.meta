@@ -8,40 +8,39 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cover2.001
-    second: {fileID: 2100000, guid: e7ea2bf65d2cf4445b4596e588a13694, type: 2}
+    second: {fileID: 2100000, guid: 0500d0dfb9301cb4592c9c066ef0920c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cover3.001
-    second: {fileID: 2100000, guid: e7ea2bf65d2cf4445b4596e588a13694, type: 2}
+    second: {fileID: 2100000, guid: 403b82588d2f2074db1bb2367da2c105, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cover4.001
-    second: {fileID: 2100000, guid: e7ea2bf65d2cf4445b4596e588a13694, type: 2}
+    second: {fileID: 2100000, guid: 8d733b5226c5d5743b1517e17ddadae7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DarkWood.005
-    second: {fileID: 2100000, guid: 962f147db0557474a9f292e9a15537fb, type: 2}
+    second: {fileID: 2100000, guid: 1dd7aa05a13e7f948a51131b9dfca506, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pages.001
-    second: {fileID: -8848810374240701247, guid: 9e97be0489c604549894aee6c6e40009,
-      type: 3}
+    second: {fileID: 2100000, guid: d9d5222c834eb5e4b8e097a01d5c38a5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sofa.001
-    second: {fileID: 2100000, guid: b578a30f306b8ff45b2920b5335feeab, type: 2}
+    second: {fileID: 2100000, guid: 8d733b5226c5d5743b1517e17ddadae7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood.007
-    second: {fileID: 2100000, guid: b578a30f306b8ff45b2920b5335feeab, type: 2}
+    second: {fileID: 2100000, guid: fb0ecf99559c36944abfb6d6f56b9b2a, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1

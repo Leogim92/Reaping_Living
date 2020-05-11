@@ -8,23 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DarkBrown.001
-    second: {fileID: 2100000, guid: 962f147db0557474a9f292e9a15537fb, type: 2}
+    second: {fileID: 2100000, guid: 1dd7aa05a13e7f948a51131b9dfca506, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sheets.001
-    second: {fileID: 2100000, guid: 80a475b836d151948b9746a6fa389cdc, type: 2}
+    second: {fileID: 2100000, guid: 403b82588d2f2074db1bb2367da2c105, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: White.001
-    second: {fileID: -8848810374240701247, guid: 9e97be0489c604549894aee6c6e40009,
-      type: 3}
+    second: {fileID: 2100000, guid: daedd53a70c04a34f9e9ba9df2b73ddc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood.001
-    second: {fileID: 2100000, guid: b578a30f306b8ff45b2920b5335feeab, type: 2}
+    second: {fileID: 2100000, guid: fb0ecf99559c36944abfb6d6f56b9b2a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
