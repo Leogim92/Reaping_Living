@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7835225603938433371}
   - component: {fileID: 7919105499448981065}
   - component: {fileID: 5474772464757559244}
+  - component: {fileID: 4945442008002141179}
   m_Layer: 0
   m_Name: Street_Grass
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7051070441534900786}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -46.79, y: 0.00000095367, z: -44.611}
-  m_LocalScale: {x: 1000, y: 1000, z: 1000}
+  m_LocalScale: {x: 800, y: 800, z: 800}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,3 +81,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4945442008002141179
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051070441534900786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.020002408, z: 0.001209093}
+  m_Center: {x: 0, y: -0.0000012037343, z: -0.00039545354}
