@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseCursor: {fileID: 2800000, guid: 31d049e01117e2145a2813e260ec778d, type: 3}
   destinationPoint: {fileID: 6203200430741058704}
-  warpDelay: 1.5
+  warpDelay: 1
 --- !u!1 &6203200431458856375
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseCursor: {fileID: 2800000, guid: 31d049e01117e2145a2813e260ec778d, type: 3}
   destinationPoint: {fileID: 6203200431181792251}
-  warpDelay: 1.5
+  warpDelay: 1
 --- !u!1 &6610001492035660628
 GameObject:
   m_ObjectHideFlags: 0
