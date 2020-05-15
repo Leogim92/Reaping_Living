@@ -19883,26 +19883,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2122527999, guid: 1a2620d0efbc9f24bb49717960582e91, type: 3}
-      propertyPath: m_XDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122527999, guid: 1a2620d0efbc9f24bb49717960582e91, type: 3}
-      propertyPath: m_YDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122527999, guid: 1a2620d0efbc9f24bb49717960582e91, type: 3}
-      propertyPath: m_ZDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122528001, guid: 1a2620d0efbc9f24bb49717960582e91, type: 3}
-      propertyPath: m_ScreenY
-      value: 0.5138887
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122528001, guid: 1a2620d0efbc9f24bb49717960582e91, type: 3}
-      propertyPath: m_SoftZoneHeight
-      value: 0.8148149
-      objectReference: {fileID: 0}
     - target: {fileID: 130918928878101264, guid: 1a2620d0efbc9f24bb49717960582e91,
         type: 3}
       propertyPath: m_LocalPosition.x

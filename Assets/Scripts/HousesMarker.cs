@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReapedHousesMarker : MonoBehaviour
+public class HousesMarker : MonoBehaviour
 {
-    [SerializeField] DoorTransporter exitDoor;
-    [SerializeField] GameObject scytheMark;
-    [SerializeField] GameObject reaperHeadMark;
+    [SerializeField] DoorTransporter exitDoor = null;
+    [SerializeField] GameObject scytheMark = null;
+    [SerializeField] GameObject reaperHeadMark = null;
     PersonData[] peopleInHouse;
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class ReapedHousesMarker : MonoBehaviour
     }
     void MarkReapedHouses()
     {
+        if (peopleInHouse.Length == 0) return;
         foreach (PersonData person in peopleInHouse)
         {
             if (!person.IsFateSealed)
