@@ -8,6 +8,7 @@ public class DoorTransporter : MonoBehaviour, IMouseInteractable
 {
     public event Action OnInteractionStart;
     public static event Action OnDoorEnter;
+    public event Action OnSpecificDoorEnter;
 
     [SerializeField] Texture2D mouseCursor = null;
     [SerializeField] Transform destinationPoint = null;
@@ -34,6 +35,7 @@ public class DoorTransporter : MonoBehaviour, IMouseInteractable
     public void StartInteraction(PlayerStats playerStats)
     {
         OnDoorEnter?.Invoke();
+        OnSpecificDoorEnter?.Invoke();
         NavMeshAgent playerAI = playerStats.transform.GetComponent<NavMeshAgent>();
         StartCoroutine(WarpPlayer(playerAI));
     }
