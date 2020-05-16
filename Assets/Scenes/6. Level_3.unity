@@ -23667,11 +23667,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 113506265366127937, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 113506265366127967, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23894,11 +23889,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MenusUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6987335328852493505, guid: ff2e97173edb7ca48bbd3ac24eed5383,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2e97173edb7ca48bbd3ac24eed5383, type: 3}
