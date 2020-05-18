@@ -5619,46 +5619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 285179953}
     m_Modifications:
-    - target: {fileID: 815046927597770574, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_text
-      value: 'Make sure if have sealed the fate of everyone and click on the arrow
-        on the top of the bridge to start the game! '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113989788530286, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113989788530286, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113989788530286, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113989788530286, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113989788530286, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6075113990032074232, guid: 72c152b6eb8fbd943a7b480142303f8f,
         type: 3}
       propertyPath: m_Name
       value: TutorialUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113990032074232, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6075113990032074233, guid: 72c152b6eb8fbd943a7b480142303f8f,
         type: 3}
@@ -5754,73 +5718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113990596696418, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113990611430992, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_text
-      value: You must always seal the fate of everyone before going to the next level,
-        while getting your Karma Points equal or superior to the Karma Goal. For
-        the sake of this tutorial, that will not be taken into consideration.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 216
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 39
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991140746800, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 202
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991434292580, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991434292580, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991434292580, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075113991434292580, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8833837646542311774, guid: 72c152b6eb8fbd943a7b480142303f8f,
-        type: 3}
-      propertyPath: m_text
-      value: Click on the second house on the back of the street.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c152b6eb8fbd943a7b480142303f8f, type: 3}
@@ -7309,6 +7206,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 285179953}
     m_Modifications:
+    - target: {fileID: 113506265254514263, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 113506265366127937, guid: 2e6f7b66cb66c5e498442f7ff5eabfc6,
         type: 3}
       propertyPath: m_Name

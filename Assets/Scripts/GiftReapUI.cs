@@ -22,7 +22,10 @@ public class GiftReapUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI eventYearText = null;
     [SerializeField] TextMeshProUGUI eventTypeText = null;
     [SerializeField] TextMeshProUGUI eventDescriptionText = null;
-
+    [Space]
+    [SerializeField] TMP_FontAsset goodFont = null;
+    [SerializeField] TMP_FontAsset badFont = null;
+    [Space]
 
     [SerializeField] Button giftYearsButton = null;
     [SerializeField] Button reapYearsButton = null;
@@ -60,17 +63,25 @@ public class GiftReapUI : MonoBehaviour
     }
     public void SetPersonData()
     {
-        nameText.text = _personData.Person.Name;
-        ageText.text = _personData.Person.Age.ToString();
-        storyText.text = _personData.Person.Story;
-        lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
-        eventYearText.text = _personData.Person.EventYear.ToString();
+        nameText.text = "Name: " + _personData.Person.Name;
+        ageText.text = "Age: " + _personData.Person.Age;
+        storyText.text = "Story: " +  _personData.Person.Story;
+        lifeExpectancyText.text = "Life Expectancy: " + _personData.Person.LifeExpectancy;
+        eventYearText.text = "Event Year: " + _personData.Person.EventYear;
         if (_personData.Person.karmaEvent) SetKarmaDetails();
     }
 
     private void SetKarmaDetails()
     {
-        eventTypeText.text = UpperFirst(_personData.Person.karmaEvent.karmaAlignment.ToString());
+        eventTypeText.text = "Event Type: " + UpperFirst(_personData.Person.karmaEvent.karmaAlignment.ToString());
+
+        if (_personData.Person.karmaEvent.karmaAlignment == KarmaEvent.Karma.good)
+        {
+            eventTypeText.font = goodFont;
+        }
+        else 
+            eventTypeText.font = badFont;
+
         eventDescriptionText.text = _personData.Person.karmaEvent.eventDescription;
     }
 
@@ -114,7 +125,7 @@ public class GiftReapUI : MonoBehaviour
     private void UpdateYears(int yearValue)
     {
         _personData.Person.LifeExpectancy += yearValue;
-        lifeExpectancyText.text = _personData.Person.LifeExpectancy.ToString();
+        lifeExpectancyText.text = "Life Expectancy: " + _personData.Person.LifeExpectancy;
         _playerStats.YearsCurrency += -yearValue;
         _playerStats.Karma += yearValue;
     }
