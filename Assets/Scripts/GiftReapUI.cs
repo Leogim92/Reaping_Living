@@ -14,7 +14,8 @@ public class GiftReapUI : MonoBehaviour
     PlayerStats _playerStats;
 
     [SerializeField] Canvas reapGiftCanvas = null;
-
+    [Space]
+    [SerializeField] Image photo = null;
     [SerializeField] TextMeshProUGUI nameText = null;
     [SerializeField] TextMeshProUGUI ageText = null;
     [SerializeField] TextMeshProUGUI storyText = null;
@@ -63,6 +64,7 @@ public class GiftReapUI : MonoBehaviour
     }
     public void SetPersonData()
     {
+        photo.sprite = _personData.Photo;
         nameText.text = "Name: " + _personData.Person.Name;
         ageText.text = "Age: " + _personData.Person.Age;
         storyText.text = "Story: " +  _personData.Person.Story;

@@ -76,11 +76,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2948856254492528296, guid: 40fd57e3136ebc44398b9196d3bba8e6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5670903641501842372, guid: 40fd57e3136ebc44398b9196d3bba8e6,
         type: 3}
       propertyPath: m_Name
-      value: Women (3)
+      value: Woman4
       objectReference: {fileID: 0}
+    - target: {fileID: 5670903641501842375, guid: 40fd57e3136ebc44398b9196d3bba8e6,
+        type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 21300000, guid: be17b290af317f94bb5e8912319e2835,
+        type: 3}
     - target: {fileID: 5670903641501842425, guid: 40fd57e3136ebc44398b9196d3bba8e6,
         type: 3}
       propertyPath: m_LocalPosition.x

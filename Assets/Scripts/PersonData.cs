@@ -9,6 +9,7 @@ public class PersonData : MonoBehaviour, IMouseInteractable
     public event Action OnInteractionStart;
 
     GiftReapUI giftReapUI;
+    [SerializeField] Sprite photo = null;
     [SerializeField] Texture2D mouseCursor=null;
     [SerializeField] PersonDetails personDetailsDB =null;
     [SerializeField] PersonBase person = null;
@@ -24,7 +25,11 @@ public class PersonData : MonoBehaviour, IMouseInteractable
         get { return isFateSealed; }
         set { isFateSealed = value; }
     }
-    
+    public Sprite Photo
+    {
+        get { return photo; }
+    }
+
     public PersonBase Person { get { return person; } }
 
 

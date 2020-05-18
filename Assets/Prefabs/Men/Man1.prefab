@@ -7,6 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 658898116491772539, guid: 8e3c0135f67f11b47868464091c187cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897850525455602125, guid: 8e3c0135f67f11b47868464091c187cb,
+        type: 3}
+      propertyPath: photo
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c57cd8d268e7ae4bac958d38f729989,
+        type: 3}
     - target: {fileID: 5897850525455602126, guid: 8e3c0135f67f11b47868464091c187cb,
         type: 3}
       propertyPath: m_Name
