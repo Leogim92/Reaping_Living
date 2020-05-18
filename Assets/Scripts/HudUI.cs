@@ -41,15 +41,15 @@ public class HudUI : MonoBehaviour
 
     void UIGiftReapUpdate()
     {
-        yearCurrencyText.text = playerStats.YearsCurrency.ToString();
-        karmaText.text = playerStats.Karma.ToString();
+        yearCurrencyText.text = "Years: " + playerStats.YearsCurrency + "/" + playerStats.TotalYears;
+        karmaText.text = "Karma Points: " + playerStats.Karma;
     }
     void UISealFate()
     {
         UpdateFateToSeal();
         goodEventsText.text = "Good Events Done: " + playerStats.GoodEventsDone;
         badEventsText.text = "Bad Events Avoided: " + playerStats.BadEventsAvoided;
-        karmaText.text = playerStats.Karma.ToString();
+        karmaText.text = "Karma Points: " + playerStats.Karma;
     }
 
     private void UpdateFateToSeal()
