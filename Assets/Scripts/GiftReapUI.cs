@@ -38,6 +38,7 @@ public class GiftReapUI : MonoBehaviour
     {
         reapGiftCanvas.enabled = value;
         if (_personData != null) SettingUIButtonsState(_personData.IsFateSealed);
+        if (GameObject.FindGameObjectWithTag("Tutorial")) FindObjectOfType<PanelManager>().HidePanel();
     }
 
     private void SettingUIButtonsState(bool fateSealState)
