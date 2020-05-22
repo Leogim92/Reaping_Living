@@ -17,6 +17,11 @@ public class ButtonRandomizer : MonoBehaviour
         GetButton(rightButton);
     }
 
+    public void DisableUpgradeButtons()
+    {
+        leftButton.GetComponentInChildren<Button>().interactable = false;
+        rightButton.GetComponentInChildren<Button>().interactable = false;
+    }
     private void GetButton(Transform buttonPosition)
     {
         GameObject button = GenerateButton();

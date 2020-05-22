@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class InGameMenusManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu = null;
     [SerializeField] GameObject gameOverMenu = null;
+    [SerializeField] TextMeshProUGUI karmaScore = null;
     AudioListener audioListener;
     PlayerStats playerStats;
 
@@ -23,7 +25,9 @@ public class InGameMenusManager : MonoBehaviour
     private void GameOver()
     {
         Time.timeScale = 0;
+        karmaScore.text = "Karma Score: " + playerStats.Karma + "/" + playerStats.KarmaGoal;
         gameOverMenu.SetActive(true);
+        
     }
 
     public void EnableDisableSound()

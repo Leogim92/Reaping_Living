@@ -510,6 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  karmaScore: {fileID: 0}
 --- !u!4 &344728725
 Transform:
   m_ObjectHideFlags: 0
