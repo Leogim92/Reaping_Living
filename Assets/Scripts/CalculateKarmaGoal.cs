@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CalculateKarmaGoal : MonoBehaviour
 {
+    const int EVENT_DONE_BONUS = 40;
+    const int EVENT_NOTDONE_BONUS = 20;
+
     PlayerStats playerStats;
     PersonData[] peopleInScene;
     private void Awake()
@@ -25,11 +28,11 @@ public class CalculateKarmaGoal : MonoBehaviour
             {
                 if (person.Person.karmaEvent.karmaAlignment == KarmaEvent.Karma.good)
                 {
-                    playerStats.KarmaGoal += playerStats.FullfilledEventValue + (person.Person.LifeExpectancy - person.Person.EventYear);
+                    playerStats.KarmaGoal += EVENT_DONE_BONUS + (person.Person.LifeExpectancy - person.Person.EventYear);
                 }
                 else
                 {
-                    playerStats.KarmaGoal += playerStats.NonFullfilledEventValue - (person.Person.LifeExpectancy - person.Person.EventYear);
+                    playerStats.KarmaGoal += EVENT_NOTDONE_BONUS - (person.Person.LifeExpectancy - person.Person.EventYear);
                 }
             }
         }

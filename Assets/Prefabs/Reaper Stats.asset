@@ -24,14 +24,14 @@ MonoBehaviour:
   defaultKarmaGoal: 0
   fullfilledEventValue: 50
   nonFullfilledEventValue: 25
-  yearsCurrency: 71
-  karma: 9
-  goodEventsDone: 1
-  badEventsAvoided: 2
+  yearsCurrency: 100
+  karma: 1125
+  goodEventsDone: 18
+  badEventsAvoided: 14
   yearsCurrencyTotal: 100
-  goodKarmaEventBonus: 20
-  badKarmaEventBonus: 10
-  navMeshSpeed: 10
+  goodKarmaEventBonus: 0
+  badKarmaEventBonus: 0
+  navMeshSpeed: 12
   interactionRange: 4
-  karmaGoal: 382
+  karmaGoal: 1225
   isSoundOn: 1
