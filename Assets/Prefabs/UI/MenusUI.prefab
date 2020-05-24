@@ -2744,6 +2744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290532092060464551}
   - component: {fileID: 493754050432371431}
+  - component: {fileID: 1612858057519856003}
   m_Layer: 5
   m_Name: MenusUI
   m_TagString: Untagged
@@ -2781,6 +2782,19 @@ MonoBehaviour:
   pauseMenu: {fileID: 608097134149965307}
   gameOverMenu: {fileID: 1688751880759684877}
   karmaScore: {fileID: 1793981934123590372}
+--- !u!114 &1612858057519856003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987335328852493505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed751ac79ad69c41a6dbbc10fb82851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundIcon: {fileID: 5278602274006833232}
 --- !u!1 &8756974368341853457
 GameObject:
   m_ObjectHideFlags: 0

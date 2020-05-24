@@ -9,6 +9,8 @@ public class GiftReapUI : MonoBehaviour
 {
     public static event Action OnGiftReap;
     public static event Action OnFateSeal;
+    public static event Action OnAllFatesSealed;
+    public static event Action<int> OnKarmaSealedUpdate;
 
     PersonData _personData;
     PlayerStats _playerStats;
@@ -138,6 +140,20 @@ public class GiftReapUI : MonoBehaviour
         SettingUIButtonsState(true);
         if (_personData.Person.karmaEvent) CalculateKarma();
         OnFateSeal?.Invoke();
+        CheckFatesToSeal();
+    }
+
+    private void CheckFatesToSeal()
+    {
+        PersonData [] peopleInScene = FindObjectsOfType<PersonData>();
+        foreach(PersonData person in peopleInScene)
+        {
+            if (person.IsFateSealed == false)
+            {
+                return;
+            }
+        }
+        OnAllFatesSealed?.Invoke();
     }
 
     void CalculateKarma()
@@ -145,6 +161,7 @@ public class GiftReapUI : MonoBehaviour
         if(_personData.Person.LifeExpectancy >= _personData.Person.EventYear)
         {
             KarmaModifier(_playerStats.FullfilledEventValue);
+            
         }
         else
         {
@@ -161,15 +178,25 @@ public class GiftReapUI : MonoBehaviour
                 {
                     _playerStats.Karma += karmaPoints + _playerStats.GoodKarmaBonus;
                     _playerStats.GoodEventsDone++;
+                    OnKarmaSealedUpdate?.Invoke(karmaPoints);
                 }
-                else _playerStats.Karma += karmaPoints;
+                else
+                {
+                    _playerStats.Karma += karmaPoints;
+                    OnKarmaSealedUpdate?.Invoke(karmaPoints);
+                }
                 break;
             case KarmaEvent.Karma.bad:
-                if (karmaPoints > 0) _playerStats.Karma += -karmaPoints;
+                if (karmaPoints > 0)
+                {
+                    _playerStats.Karma += -karmaPoints;
+                    OnKarmaSealedUpdate?.Invoke(-karmaPoints);
+                }
                 else
                 {
                     _playerStats.Karma += -karmaPoints + _playerStats.BadKarmaBonus;
                     _playerStats.BadEventsAvoided++;
+                    OnKarmaSealedUpdate?.Invoke(-karmaPoints);
                 }
                 break;
         }

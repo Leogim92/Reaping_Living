@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class InGameMenusManager : MonoBehaviour
 {
+    public static event Action<bool> OnSoundTrigger;
     [SerializeField] GameObject pauseMenu = null;
     [SerializeField] GameObject gameOverMenu = null;
     [SerializeField] TextMeshProUGUI karmaScore = null;
@@ -34,6 +36,7 @@ public class InGameMenusManager : MonoBehaviour
     {
         playerStats.IsSoundOn = !audioListener.enabled;
         audioListener.enabled = !audioListener.enabled;
+        OnSoundTrigger?.Invoke(playerStats.IsSoundOn);
     }
     public void OpenPauseMenu()
     {

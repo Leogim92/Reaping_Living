@@ -11,6 +11,7 @@ public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
     
     PersonData[] peopleInScene;
 
+    public static event Action OnUnsealedFates;
     public static event Action OnKarmaGoalFailed;
     public static event Action OnNextLevelTrigger;
     
@@ -25,7 +26,7 @@ public class NextLevelTrigger : MonoBehaviour, IMouseInteractable
         {
             if (person.IsFateSealed == false)
             {
-                Debug.Log("You haven't sealed all the fates yet");
+                OnUnsealedFates?.Invoke();
                 return;
             }
         }
