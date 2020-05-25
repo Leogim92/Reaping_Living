@@ -103,8 +103,9 @@ public class GiftReapUI : MonoBehaviour
                 yearsToGift = SHIFT_VALUE;
             }
             else
+            {
                 yearsToGift = 1;
-
+            }
             UpdateYears(yearsToGift);
             OnGiftReap?.Invoke();
         }
@@ -121,8 +122,9 @@ public class GiftReapUI : MonoBehaviour
                 yearsToReap = SHIFT_VALUE;
             }
             else
+            {
                 yearsToReap = 1;
-
+            }
             UpdateYears(-yearsToReap);
             OnGiftReap?.Invoke();
         }
@@ -140,22 +142,7 @@ public class GiftReapUI : MonoBehaviour
         SettingUIButtonsState(true);
         if (_personData.Person.karmaEvent) CalculateKarma();
         OnFateSeal?.Invoke();
-        CheckFatesToSeal();
     }
-
-    private void CheckFatesToSeal()
-    {
-        PersonData [] peopleInScene = FindObjectsOfType<PersonData>();
-        foreach(PersonData person in peopleInScene)
-        {
-            if (person.IsFateSealed == false)
-            {
-                return;
-            }
-        }
-        OnAllFatesSealed?.Invoke();
-    }
-
     void CalculateKarma()
     {
         if(_personData.Person.LifeExpectancy >= _personData.Person.EventYear)
@@ -178,7 +165,7 @@ public class GiftReapUI : MonoBehaviour
                 {
                     _playerStats.Karma += karmaPoints + _playerStats.GoodKarmaBonus;
                     _playerStats.GoodEventsDone++;
-                    OnKarmaSealedUpdate?.Invoke(karmaPoints);
+                    OnKarmaSealedUpdate?.Invoke(karmaPoints + _playerStats.GoodKarmaBonus);
                 }
                 else
                 {
@@ -196,7 +183,7 @@ public class GiftReapUI : MonoBehaviour
                 {
                     _playerStats.Karma += -karmaPoints + _playerStats.BadKarmaBonus;
                     _playerStats.BadEventsAvoided++;
-                    OnKarmaSealedUpdate?.Invoke(-karmaPoints);
+                    OnKarmaSealedUpdate?.Invoke(-karmaPoints + _playerStats.BadKarmaBonus);
                 }
                 break;
         }

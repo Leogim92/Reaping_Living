@@ -10,10 +10,15 @@ public class PopUpSystem : MonoBehaviour
     [SerializeField] GameObject karmaPlus = null;
     [SerializeField] GameObject karmaMinus = null;
 
+    PersonData[] peopleInScene;
+    private void Awake()
+    {
+        peopleInScene = FindObjectsOfType<PersonData>();
+    }
     private void Start()
     {
         NextLevelTrigger.OnUnsealedFates += DisplayUnsealedText;
-        GiftReapUI.OnAllFatesSealed += DisplaySealedText;
+        GiftReapUI.OnFateSeal += DisplaySealedText;
         GiftReapUI.OnKarmaSealedUpdate += KarmaPointsPopUp;
     }
 
@@ -23,7 +28,14 @@ public class PopUpSystem : MonoBehaviour
     }
     void DisplaySealedText()
     {
-
+        Debug.Log("Checking Fates");
+        foreach (PersonData person in peopleInScene)
+        {
+            if (person.IsFateSealed == false)
+            {
+                return;
+            }
+        }
         sealedFates.SetTrigger("PopUp");
     }
     void KarmaPointsPopUp(int karma)
@@ -42,7 +54,7 @@ public class PopUpSystem : MonoBehaviour
     private void OnDestroy()
     {
         NextLevelTrigger.OnUnsealedFates -= DisplayUnsealedText;
-        GiftReapUI.OnAllFatesSealed -= DisplaySealedText;
+        GiftReapUI.OnFateSeal -= DisplaySealedText;
         GiftReapUI.OnKarmaSealedUpdate -= KarmaPointsPopUp;
     }
 }
