@@ -55,11 +55,6 @@ public class PlayerStats : MonoBehaviour
         get { return reaperStats.navMeshSpeed; }
         set { reaperStats.navMeshSpeed = value; }
     }
-    public int InteractionRange
-    {
-        get { return reaperStats.interactionRange; }
-        set { reaperStats.interactionRange = value; }
-    }
     public int KarmaGoal
     {
         get { return reaperStats.karmaGoal; }

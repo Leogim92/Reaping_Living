@@ -15,7 +15,7 @@ public class ReaperStats : ScriptableObject
     [SerializeField] int defaultGoodKarmaEventBonus = 0;
     [SerializeField] int defaultBadKarmaEventBonus = 0;
     [SerializeField] int defaultNavMeshSpeed = 10;
-    [SerializeField] int defaultInteractionRange = 4;
+
     [Space]
     [SerializeField] int defaultKarmaGoal=0;
 
@@ -34,7 +34,6 @@ public class ReaperStats : ScriptableObject
     [HideInInspector] public int goodKarmaEventBonus;
     [HideInInspector] public int badKarmaEventBonus;
     [HideInInspector] public int navMeshSpeed;
-    [HideInInspector] public int interactionRange;
 
     [HideInInspector] public int karmaGoal;
 
@@ -53,7 +52,6 @@ public class ReaperStats : ScriptableObject
         goodKarmaEventBonus = defaultGoodKarmaEventBonus;
         badKarmaEventBonus = defaultBadKarmaEventBonus;
         navMeshSpeed = defaultNavMeshSpeed;
-        interactionRange = defaultInteractionRange;
 
         karmaGoal = defaultKarmaGoal;
     }
