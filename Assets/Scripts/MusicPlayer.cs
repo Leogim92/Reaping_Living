@@ -24,7 +24,13 @@ public class MusicPlayer : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        InGameMenusManager.OnSoundTrigger += SetVolume;
         StartCoroutine(Playlist());
+    }
+    void SetVolume(bool soundState)
+    {
+        if (soundState) audioSource.volume = 1;
+        else audioSource.volume = 0;
     }
     IEnumerator Playlist()
     {
@@ -47,5 +53,9 @@ public class MusicPlayer : MonoBehaviour
                 }
             }
         }
+    }
+    private void OnDestroy()
+    {
+        InGameMenusManager.OnSoundTrigger -= SetVolume;
     }
 }

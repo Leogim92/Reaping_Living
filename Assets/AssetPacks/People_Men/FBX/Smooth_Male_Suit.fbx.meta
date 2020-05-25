@@ -38,7 +38,7 @@ ModelImporter:
     second: HumanArmature|Man_Walk
   externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

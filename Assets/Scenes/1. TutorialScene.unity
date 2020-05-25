@@ -4540,6 +4540,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3286793777105920429, guid: ff2e97173edb7ca48bbd3ac24eed5383,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323181325634404179, guid: ff2e97173edb7ca48bbd3ac24eed5383,
         type: 3}
       propertyPath: m_textInfo.characterCount

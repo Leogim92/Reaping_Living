@@ -36,8 +36,8 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnUITrigger += UISound;
         InGameMenusManager.OnUITrigger += UISound;
         PanelManager.OnUITrigger += UISound;
-        
-        
+
+        InGameMenusManager.OnSoundTrigger += SetVolume;
     }
     void DoorSFX() => audioSource.PlayOneShot(doorSFX);
     void UnsealedSFX() => audioSource.PlayOneShot(unsealedSFX);
@@ -46,7 +46,11 @@ public class SFXPlayer : MonoBehaviour
     void GameOverSFX() => audioSource.PlayOneShot(gameOverSFX);
     void UISound() => audioSource.PlayOneShot(uiTriggerSFX);
 
-
+    void SetVolume(bool soundState)
+    {
+        if (soundState) audioSource.volume = 1;
+        else audioSource.volume = 0;
+    }
     private void OnDestroy()
     {
         DoorTransporter.OnDoorEnter -= DoorSFX;
@@ -57,6 +61,8 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnUITrigger -= UISound;
         InGameMenusManager.OnUITrigger -= UISound;
         PanelManager.OnUITrigger -= UISound;
+
+        InGameMenusManager.OnSoundTrigger -= SetVolume;
     }
 
 

@@ -36,8 +36,7 @@ public class InGameMenusManager : MonoBehaviour
 
     public void EnableDisableSound()
     {
-        playerStats.IsSoundOn = !audioListener.enabled;
-        audioListener.enabled = !audioListener.enabled;
+        playerStats.IsSoundOn = !playerStats.IsSoundOn;
         OnSoundTrigger?.Invoke(playerStats.IsSoundOn);
         OnUITrigger?.Invoke();
 
