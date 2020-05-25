@@ -7,6 +7,7 @@ using TMPro;
 
 public class GiftReapUI : MonoBehaviour
 {
+    public static event Action OnUITrigger;
     public static event Action OnGiftReap;
     public static event Action OnFateSeal;
     public static event Action<int> OnKarmaSealedUpdate;
@@ -37,6 +38,7 @@ public class GiftReapUI : MonoBehaviour
     //UI Filling
     public void TriggerReapGiftUI(bool value)
     {
+        OnUITrigger?.Invoke();
         reapGiftCanvas.enabled = value;
         if (_personData != null) SettingUIButtonsState(_personData.IsFateSealed);
         if (GameObject.FindGameObjectWithTag("Tutorial")) FindObjectOfType<PanelManager>().HidePanel();
