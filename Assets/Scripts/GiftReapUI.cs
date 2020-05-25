@@ -9,7 +9,6 @@ public class GiftReapUI : MonoBehaviour
 {
     public static event Action OnGiftReap;
     public static event Action OnFateSeal;
-    public static event Action OnAllFatesSealed;
     public static event Action<int> OnKarmaSealedUpdate;
 
     PersonData _personData;
