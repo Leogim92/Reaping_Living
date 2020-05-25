@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class InGameMenusManager : MonoBehaviour
 {
     public static event Action<bool> OnSoundTrigger;
+    public static event Action OnUITrigger;
+
     [SerializeField] GameObject pauseMenu = null;
     [SerializeField] GameObject gameOverMenu = null;
     [SerializeField] TextMeshProUGUI karmaScore = null;
@@ -37,32 +39,40 @@ public class InGameMenusManager : MonoBehaviour
         playerStats.IsSoundOn = !audioListener.enabled;
         audioListener.enabled = !audioListener.enabled;
         OnSoundTrigger?.Invoke(playerStats.IsSoundOn);
+        OnUITrigger?.Invoke();
+
     }
     public void OpenPauseMenu()
     {
         pauseMenu.SetActive(true);
+        OnUITrigger?.Invoke();
     }
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        OnUITrigger?.Invoke();
     }
     public void ReturnToMainMenu()
     {
+        OnUITrigger?.Invoke();
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
     public void TakeTutorial()
     {
+        OnUITrigger?.Invoke();
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
     public void RestartGame()
     {
+        OnUITrigger?.Invoke();
         Time.timeScale = 1;
         SceneManager.LoadScene(2);
     }
     public void QuitGame()
     {
+        OnUITrigger?.Invoke();
         Application.Quit();
     }
 

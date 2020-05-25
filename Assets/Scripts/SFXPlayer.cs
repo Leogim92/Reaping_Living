@@ -34,6 +34,9 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnGiftReap += GiftReapSFX;
         GiftReapUI.OnFateSeal += SealFateSFX;
         GiftReapUI.OnUITrigger += UISound;
+        InGameMenusManager.OnUITrigger += UISound;
+        PanelManager.OnUITrigger += UISound;
+        
         
     }
     void DoorSFX() => audioSource.PlayOneShot(doorSFX);
@@ -52,6 +55,8 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnGiftReap -= GiftReapSFX;
         GiftReapUI.OnFateSeal -= SealFateSFX;
         GiftReapUI.OnUITrigger -= UISound;
+        InGameMenusManager.OnUITrigger -= UISound;
+        PanelManager.OnUITrigger -= UISound;
     }
 
 

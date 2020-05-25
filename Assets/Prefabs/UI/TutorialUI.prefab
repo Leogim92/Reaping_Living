@@ -7301,7 +7301,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -7645,6 +7645,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6075113990032074233}
+    - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePanel
+      objectReference: {fileID: 0}
     - target: {fileID: 8227021563996376945, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_text
@@ -8050,7 +8055,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -8523,7 +8528,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -8982,7 +8987,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -9448,7 +9453,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -9905,6 +9910,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6075113990032074233}
+    - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePanel
+      objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -10341,7 +10351,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -10833,7 +10843,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -11316,7 +11326,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
@@ -11798,7 +11808,7 @@ PrefabInstance:
     - target: {fileID: 7359831849610911432, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HidePanel
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 7359831850626958937, guid: 8eec98e64bfad0d4685b9f8eca429850,
         type: 3}

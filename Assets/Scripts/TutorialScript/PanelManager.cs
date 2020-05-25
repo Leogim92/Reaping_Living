@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PanelManager : MonoBehaviour
 {
+    public static event Action OnUITrigger;
+
     [SerializeField] List<TutorialPanelLink> linkedPanelTriggers = null;
     [Space]
     [SerializeField] GameObject firstPanel = null;
@@ -20,6 +23,11 @@ public class PanelManager : MonoBehaviour
     {
         if(firstPanel) firstPanel.SetActive(false);
         tutorialPanels[panelIndex].SetActive(false);
+    }
+    public void ClosePanel()
+    {
+        HidePanel();
+        OnUITrigger?.Invoke();
     }
 
     public void SetPanelIndex(TutorialPanelLink linkedObject)

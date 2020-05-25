@@ -28,7 +28,6 @@ public class PopUpSystem : MonoBehaviour
     }
     void DisplaySealedText()
     {
-        Debug.Log("Checking Fates");
         foreach (PersonData person in peopleInScene)
         {
             if (person.IsFateSealed == false)
