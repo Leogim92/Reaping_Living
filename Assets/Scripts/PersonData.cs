@@ -13,12 +13,12 @@ public class PersonData : MonoBehaviour, IMouseInteractable
     [SerializeField] Texture2D mouseCursor=null;
     [SerializeField] PersonDetails personDetailsDB =null;
     [SerializeField] PersonBase person = null;
-    [SerializeField] bool isRandomlyGenerated = false;
+
     bool isFateSealed = false;
     private void Awake()
     {
         giftReapUI = FindObjectOfType<GiftReapUI>();
-        if(isRandomlyGenerated)person = PersonBase.CreateInstance(personDetailsDB);
+        person = PersonBase.CreateInstance(personDetailsDB);
     }
     public bool IsFateSealed
     {

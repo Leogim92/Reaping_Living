@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca189e68150984a4c8734a56466bad1e, type: 3}
   m_Name: TutorialMan1
   m_EditorClassIdentifier: 
-  firstName: Tutorial
-  lastName: Man1
-  story: This is my story
-  age: 20
+  firstName: Michael
+  lastName: Santos
+  story: Hates the fact that he serves no purpose.
+  age: 28
   eventYear: 0
   lifeExpectancy: 59
   karmaEvent: {fileID: 0}

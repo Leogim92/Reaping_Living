@@ -74,7 +74,7 @@ public class GiftReapUI : MonoBehaviour
         storyText.text = "Story: " +  _personData.Person.Story;
         lifeExpectancyText.text = "Life Expectancy: " + _personData.Person.LifeExpectancy;
         eventYearText.text = "Event Year: " + _personData.Person.EventYear;
-        if (_personData.Person.karmaEvent) SetKarmaDetails();
+        SetKarmaDetails();
     }
 
     private void SetKarmaDetails()
