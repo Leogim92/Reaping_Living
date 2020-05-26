@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 2884645510169711163}
   m_IndirectSpecularColor: {r: 0.18387115, g: 0.22901793, b: 0.30311325, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 2
-    m_AtlasSize: 512
+    m_BakeResolution: 10
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 0
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 512
@@ -19822,7 +19822,7 @@ PrefabInstance:
     - target: {fileID: 130918928878101264, guid: 1a2620d0efbc9f24bb49717960582e91,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3224955
+      value: 0.32249552
       objectReference: {fileID: 0}
     - target: {fileID: 130918928878101264, guid: 1a2620d0efbc9f24bb49717960582e91,
         type: 3}
@@ -20074,6 +20074,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc366cbcb82eb534eb6be38bd7c9705a, type: 3}
+--- !u!108 &2884645510169711163 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2884645509617242719, guid: bc366cbcb82eb534eb6be38bd7c9705a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2884645510169711162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2904343226333164176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20318,7 +20324,7 @@ PrefabInstance:
     - target: {fileID: 7480769634859457796, guid: 414e2dce50e62c8439238acebdb91aff,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3224955
+      value: 0.32249552
       objectReference: {fileID: 0}
     - target: {fileID: 7480769634859457796, guid: 414e2dce50e62c8439238acebdb91aff,
         type: 3}
