@@ -98,3 +98,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 45628fc3ba98c1d46b4e43f1c9a3fb3f, type: 2}
   badKarmaEvents:
   - {fileID: 11400000, guid: 91091acf55877e5448e2d626b13fe104, type: 2}
+  - {fileID: 11400000, guid: 896648dcf4b7501449c6a525c8c7c34b, type: 2}
+  - {fileID: 11400000, guid: 35dd8eb8a57eefb4b948912f2f7b264b, type: 2}
+  - {fileID: 11400000, guid: 6aa0923f72c4be64eb631559f916c9c9, type: 2}
+  - {fileID: 11400000, guid: 5d39b0e61a7bfa04a83d562019d37eaa, type: 2}
+  - {fileID: 11400000, guid: b13c228a31685b949816c76ae5f7786a, type: 2}
+  - {fileID: 11400000, guid: ebf3a6f46179c8041a5b16ff9f41cd02, type: 2}
+  - {fileID: 11400000, guid: 209370970a9795b49aab8d9f13b41316, type: 2}
+  - {fileID: 11400000, guid: fc5b6bae298a64647a3e804e6470908d, type: 2}
+  - {fileID: 11400000, guid: a0d764c18e85b4a45bb46a0e5827724d, type: 2}
+  - {fileID: 11400000, guid: 0c8cd4ee71a71884ba068ceb5371d481, type: 2}
+  - {fileID: 11400000, guid: 25c5420aee882fa4891b5f060b15cb51, type: 2}
+  - {fileID: 11400000, guid: b653ac645f39cac4cb6dcf26b1afa725, type: 2}
+  - {fileID: 11400000, guid: a64ffd06430a0b443976093e633b9d88, type: 2}
+  - {fileID: 11400000, guid: 70b52862f2882ae4482be77aeb7a056c, type: 2}
+  - {fileID: 11400000, guid: ac4acbe66305d78478bb8bc54472c100, type: 2}
+  - {fileID: 11400000, guid: afea24001d9949743a7494894cb1ff0f, type: 2}
+  - {fileID: 11400000, guid: 6a3b78153ee90064ea9554902be512d8, type: 2}
+  - {fileID: 11400000, guid: efb03b84b9a4ba04d9bf34719c6362ac, type: 2}
+  - {fileID: 11400000, guid: 5ed013da63e6d2146ae69b49e33eddcf, type: 2}
