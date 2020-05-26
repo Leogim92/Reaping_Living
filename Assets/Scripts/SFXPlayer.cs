@@ -36,6 +36,7 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnUITrigger += UISound;
         InGameMenusManager.OnUITrigger += UISound;
         PanelManager.OnUITrigger += UISound;
+        UpgradeManager.OnUITrigger += UISound;
 
         InGameMenusManager.OnSoundTrigger += SetVolume;
     }
@@ -61,6 +62,7 @@ public class SFXPlayer : MonoBehaviour
         GiftReapUI.OnUITrigger -= UISound;
         InGameMenusManager.OnUITrigger -= UISound;
         PanelManager.OnUITrigger -= UISound;
+        UpgradeManager.OnUITrigger -= UISound;
 
         InGameMenusManager.OnSoundTrigger -= SetVolume;
     }

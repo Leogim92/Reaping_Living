@@ -13,13 +13,47 @@ MonoBehaviour:
   m_Name: 1.Man Details 1
   m_EditorClassIdentifier: 
   firstName:
+  - Aaron
+  - Andrew
+  - Bruno
+  - Carl
+  - Charles
+  - Dean
+  - David
+  - Ian
   - John
-  - James
   - Joel
+  - Louis
+  - Michael
+  - Miles
+  - Marshal
+  - Paul
+  - Roger
+  - Richard
+  - Robert
+  - Trevor
+  - Thomas
   lastName:
-  - Smith
-  - Baker
   - Auckburn
+  - Allen
+  - Brown
+  - Campbell
+  - Collins
+  - Davis
+  - Diaz
+  - Hughes
+  - Jones
+  - Jenkins
+  - Lewis
+  - Miller
+  - Morgen
+  - Myers
+  - Parker
+  - Reeds
+  - Robinson
+  - Scott
+  - Smith
+  - Williams
   story:
   - Started a flea farm to pay the bills
   - Loves puppies, but hates full grown dogs.
