@@ -60,7 +60,7 @@ MonoBehaviour:
   - Smashes plates with the head as a hobby.
   - Believes the Earth to be a triangle.
   - Feeds corn to eggplants.
-  - Dances everynight at the local cemetery.
+  - Dances every night at the local cemetery.
   - Hates beer. But still drinks it.
   - Had a monster truck but exchanged it for a hoe.
   - Had no childhood. Was born 18 years old.
@@ -72,10 +72,29 @@ MonoBehaviour:
   - Brews beer at home. Everybody already knows, ok?
   - Believes himself to be the next saviour of mankind.
   - Loves to give foot massages to old ladies.
-  - The real founder of google. According to him.
+  - The real founder of Google. According to him.
   - Descendant of the last Emperor of China. According to him.
   - Has a sanctuary for dirty socks at home.
   goodKarmaEvents:
   - {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}
+  - {fileID: 11400000, guid: a6f5eaa02a16d7c4f9f6f8dc15d57d08, type: 2}
+  - {fileID: 11400000, guid: 3902c3a9c73f8654a812853c7e1efd57, type: 2}
+  - {fileID: 11400000, guid: 4655c4b9f119df541a5a4af6fbcf32fa, type: 2}
+  - {fileID: 11400000, guid: 0a2eb35f023d8084f8aaf24372ab7fe2, type: 2}
+  - {fileID: 11400000, guid: 1ed40e026975f424fb9ce94edef38dfe, type: 2}
+  - {fileID: 11400000, guid: d57c9c51118d4b046aa9820df5739775, type: 2}
+  - {fileID: 11400000, guid: 0ebbab1ea9e36db449de9c56c54da453, type: 2}
+  - {fileID: 11400000, guid: d0c7691ce61529046bc6421abb7499fd, type: 2}
+  - {fileID: 11400000, guid: 0a54b0ce2ff76b34d905678d6bb6748d, type: 2}
+  - {fileID: 11400000, guid: 1059cad9881baa14fb9aeec5ea881354, type: 2}
+  - {fileID: 11400000, guid: a1686549483334c4e94725669e9ed499, type: 2}
+  - {fileID: 11400000, guid: 3a9104a63daba2546828e89d38665920, type: 2}
+  - {fileID: 11400000, guid: ab04bb49533197347b1ac7572097a890, type: 2}
+  - {fileID: 11400000, guid: 8665dcd16f6d7114183bd13146f70864, type: 2}
+  - {fileID: 11400000, guid: c4af14e70e4903947a2fd92f3c1d98b6, type: 2}
+  - {fileID: 11400000, guid: 0523f066369d0f443a190947dfc927fe, type: 2}
+  - {fileID: 11400000, guid: e6e0d0ae100e1e34ca65be462b1a08b3, type: 2}
+  - {fileID: 11400000, guid: 3a757d8c07b07cd4db1c6df0e975e579, type: 2}
+  - {fileID: 11400000, guid: 45628fc3ba98c1d46b4e43f1c9a3fb3f, type: 2}
   badKarmaEvents:
   - {fileID: 11400000, guid: 91091acf55877e5448e2d626b13fe104, type: 2}
