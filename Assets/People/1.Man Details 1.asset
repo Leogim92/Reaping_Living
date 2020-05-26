@@ -46,7 +46,7 @@ MonoBehaviour:
   - Jenkins
   - Lewis
   - Miller
-  - Morgen
+  - Morgan
   - Myers
   - Parker
   - Reeds
@@ -55,9 +55,26 @@ MonoBehaviour:
   - Smith
   - Williams
   story:
-  - Started a flea farm to pay the bills
+  - Started a flea farm to pay the bills.
   - Loves puppies, but hates full grown dogs.
-  - Smashes plates with the head for hobby.
+  - Smashes plates with the head as a hobby.
+  - Believes the Earth to be a triangle.
+  - Feeds corn to eggplants.
+  - Dances everynight at the local cemetery.
+  - Hates beer. But still drinks it.
+  - Had a monster truck but exchanged it for a hoe.
+  - Had no childhood. Was born 18 years old.
+  - Loves to prank himself.
+  - If he had one coin for every good deed, he would be poor.
+  - Bought a car last year. Still hasn't arrived.
+  - His teachers gave up on him.
+  - Has the annoying habbit of sniffing dust.
+  - Brews beer at home. Everybody already knows, ok?
+  - Believes himself to be the next saviour of mankind.
+  - Loves to give foot massages to old ladies.
+  - The real founder of google. According to him.
+  - Descendant of the last Emperor of China. According to him.
+  - Has a sanctuary for dirty socks at home.
   goodKarmaEvents:
   - {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}
   badKarmaEvents:

@@ -13,17 +13,68 @@ MonoBehaviour:
   m_Name: 2. Woman Details
   m_EditorClassIdentifier: 
   firstName:
-  - Jane
-  - Clara
-  - Sophie
+  - Ashley
+  - Bianca
+  - Barbara
+  - Carol
+  - Christine
+  - Diane
+  - Doris
+  - Elizabeth
+  - Ellie
+  - Jennifer
+  - Karen
+  - Linda
+  - Laura
+  - Mary
+  - Michelle
+  - Nancy
+  - Patricia
+  - Sarah
+  - Susan
+  - Victoria
   lastName:
-  - Johnson
-  - Everness
-  - Blackburn
+  - Auckburn
+  - Allen
+  - Brown
+  - Campbell
+  - Collins
+  - Davis
+  - Diaz
+  - Hughes
+  - Jones
+  - Jenkins
+  - Lewis
+  - Miller
+  - Morgan
+  - Myers
+  - Parker
+  - Reeds
+  - Robinson
+  - Scott
+  - Smith
+  - Williams
   story:
-  - Started a flea farm to pay the bills
-  - Loves puppies, but hates full grown dogs.
-  - Smashes plates with the head for hobby.
+  - Hobbies include beheading dolls.
+  - Allergic to cats and wooden doors.
+  - Founder of amazon. According to her.
+  - Collects baby toe nails.
+  - Can communicate with dolphins.
+  - Paints trashcans as a hobby.
+  - Loves adrenaline. By syringe, mostly.
+  - Uses make-up to hide the fact that she is a koala.
+  - Lead singer of a cricket night band.
+  - She's married to the moon. Has documents comproving.
+  - Cinephile. She's not allowed 100 meters from a movie theater.
+  - The truth? She can't handle the truth.
+  - Keeps the ashes of her mother on her purse.
+  - Wears multiple watches to accurately track the sun.
+  - Martial artist - can throw pens with deadly accuracy.
+  - Thinks herself to be in love with her pet fish - Joseph.
+  - Once she gave birth to a office desk.
+  - 'Hobbies include burning money. '
+  - Can juggle using babies.
+  - Shaves her head once in a while to check what's underneath.
   goodKarmaEvents:
   - {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}
   badKarmaEvents:
