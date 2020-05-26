@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BadEvent8
   m_EditorClassIdentifier: 
   karmaAlignment: 1
-  eventDescription: Will create a Facebook, and start spreading news of unreliable
+  eventDescription: Will create a Facebook, and start spreading news from unreliable
     sources.

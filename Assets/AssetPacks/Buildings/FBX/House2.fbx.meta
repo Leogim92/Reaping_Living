@@ -10,7 +10,7 @@ ModelImporter:
       name: Texture
     second: {fileID: 2100000, guid: 0327773ff1b05ec4f9ae63f17b228574, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1

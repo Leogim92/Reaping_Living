@@ -61,7 +61,7 @@ MonoBehaviour:
   - Collects baby toe nails.
   - Can communicate with dolphins.
   - Paints trashcans as a hobby.
-  - Loves adrenaline. By syringe, mostly.
+  - Loves adrenaline. Administred by syringe, mostly.
   - Uses make-up to hide the fact that she is a koala.
   - Lead singer of a cricket night band.
   - Married to the moon. Or so she says.
@@ -73,7 +73,7 @@ MonoBehaviour:
   - Thinks herself to be in love with her pet fish - Joseph.
   - Once, she gave birth to a office desk.
   - 'Hobbies include burning money. '
-  - Can juggle using babies.
+  - Can juggle babies.
   - Shaves her head once in a while to check what's underneath.
   goodKarmaEvents:
   - {fileID: 11400000, guid: 908d71b33d330324d9344e8f60adff73, type: 2}
