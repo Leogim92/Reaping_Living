@@ -294,6 +294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woman2
       objectReference: {fileID: 0}
+    - target: {fileID: 6218281099068015973, guid: 49c389c81479312458686ce5ae321844,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c389c81479312458686ce5ae321844, type: 3}
 --- !u!1001 &620080921
@@ -307,6 +312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Woman1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776348234992994139, guid: 3dc571d6397d9c74da251037030f8282,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4776348234992994150, guid: 3dc571d6397d9c74da251037030f8282,
         type: 3}
@@ -452,6 +462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man2
       objectReference: {fileID: 0}
+    - target: {fileID: 6348869833317289805, guid: 9481836c874c59c4b862fedde9063df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6348869833317289840, guid: 9481836c874c59c4b862fedde9063df9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,6 +605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man4
       objectReference: {fileID: 0}
+    - target: {fileID: 2732000112580938372, guid: 0c07da7e0c8cad240b6b76c6f36aa62d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2732000112580938425, guid: 0c07da7e0c8cad240b6b76c6f36aa62d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -658,6 +678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Man1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449127540321063518, guid: 27f7709a8b42749459e7ac2242609183,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1449127540321063523, guid: 27f7709a8b42749459e7ac2242609183,
         type: 3}
@@ -783,6 +808,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man3
       objectReference: {fileID: 0}
+    - target: {fileID: 4123794350911455140, guid: d9ea488b7d1c68e48b4ad8eea8711da7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9ea488b7d1c68e48b4ad8eea8711da7, type: 3}
 --- !u!1001 &2103451217
@@ -796,6 +826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Woman4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902093246140596763, guid: 81dc3faaec437344e8a4a985e6ce454d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1902093246140596774, guid: 81dc3faaec437344e8a4a985e6ce454d,
         type: 3}
@@ -1087,6 +1122,11 @@ PrefabInstance:
     - target: {fileID: 1290532092060464551, guid: ff2e97173edb7ca48bbd3ac24eed5383,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688751880759684877, guid: ff2e97173edb7ca48bbd3ac24eed5383,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6987335328852493505, guid: ff2e97173edb7ca48bbd3ac24eed5383,

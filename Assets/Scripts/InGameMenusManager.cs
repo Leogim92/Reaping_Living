@@ -29,7 +29,7 @@ public class InGameMenusManager : MonoBehaviour
     private void GameOver()
     {
         Time.timeScale = 0;
-        karmaScore.text = "Karma Score: " + playerStats.Karma + "/" + playerStats.KarmaGoal;
+        karmaScore.text = "Karma Score: \n " + playerStats.Karma + "/" + playerStats.KarmaGoal;
         gameOverMenu.SetActive(true);
         
     }
