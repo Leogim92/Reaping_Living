@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BadEvent2
   m_EditorClassIdentifier: 
   karmaAlignment: 1
-  eventDescription: Will create a disease that kills Koalas.
+  eventDescription: Will create a disease that kills koalas.
